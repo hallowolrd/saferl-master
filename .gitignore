@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Outputs and data
+outputs/
+data/raw/
+data/processed/
+*.pt
+*.pth
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System
+.DS_Store
+Thumbs.db
+
+# Project-specific
+.claude/
+temp/
+*.docx
+!终稿（杨爱惠）（5.16) .docx
+
+# Config with secrets
+.env
+.env.*
+bak/

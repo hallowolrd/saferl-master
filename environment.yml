@@ -1,0 +1,64 @@
+# =============================================================================
+# Conda 环境文件 — hfg-srl (Safe RL for Microgrid Optimal Dispatch)
+#
+# 用法:
+#   conda env create -f environment.yml
+#   conda activate saferl
+#   # 激活后在仓库根目录执行（项目本身以可编辑模式安装）:
+#   pip install -e .
+#
+# 说明:
+#   - Python 版本对齐当前可用 .venv (3.13)；pyproject.toml 要求 >=3.10。
+#   - 版本号对齐当前 .venv 中已验证可用的版本。
+#   - 已普查全部 102 个 .py（src/ run/ scripts/ analysis/ tests/ temp/ 等）：
+#     实际第三方 import 仅 numpy/torch/pandas/matplotlib/scipy/pdfplumber/pytest。
+#   - hydra-core / omegaconf：temp/validate_min_fcsd_tune.py 有裸 import（未实际调用），
+#     且 pyproject 声明，保留以免该脚本运行时报 ImportError。
+#   - gymnasium / seaborn：pyproject 声明，但全仓库无任何 import（环境为自定义
+#     MicrogridEnv、配置为 dataclass），保留以兼容声明与后续扩展。
+#   - scipy、pdfplumber 是代码实际 import 但 pyproject 未声明的库，已补入。
+#   - 已确认无需 requests/tqdm/joblib/PIL/sklearn/tensorboard/wandb/cv2/openpyxl 等。
+# =============================================================================
+name: saferl
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ---- Python 运行时 ----
+  - python=3.13
+  - pip
+
+  # ---- 数值/科学计算（conda 安装，预编译 wheel 稳定）----
+  - numpy=2.5.3
+  - pandas=3.0.6
+  - scipy=1.18.1
+  - matplotlib=3.11.2
+
+  # ---- 其余通过 pip 安装（torch 等）----
+  - pip:
+      # 深度学习框架（CPU/GPU 由 PyPI wheel 决定；本项目微电网仿真为 CPU 密集）
+      - torch==2.14.0
+
+      # RL 环境接口（pyproject 声明）
+      - gymnasium==1.3.0
+
+      # 绘图/可视化
+      - seaborn==0.13.2
+
+      # 配置管理（pyproject 声明，当前未直接 import，保留备用）
+      - hydra-core==1.3.7
+      - omegaconf==2.3.1
+
+      # PDF 提取脚本 scripts/extract_papers.py 使用
+      - pdfplumber==0.11.10
+
+      # ---- 开发/测试 ----
+      - pytest==9.1.1
+      # 以下为 pyproject dev extras 声明，当前 .venv 未安装，按需取消注释:
+      # - ruff==0.16.8
+      # - mypy==2.3.1
+
+      # 项目本身（可编辑安装，提供 hfg_srl 包）
+      - -e .

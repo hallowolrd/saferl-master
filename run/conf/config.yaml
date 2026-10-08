@@ -1,0 +1,87 @@
+# HFG-SRL default configuration
+# Override via command line: python run/train.py env.mode=islanded algorithm.lr_actor=1e-4
+
+env:
+  mode: grid_connected
+  time_steps_per_day: 96
+  num_days: 365
+  pv_capacity_kw: 2000.0
+  wt_capacity_kw: 1500.0
+  ess_capacity_kwh: 5000.0
+  ess_power_kw: 2000.0
+  de_rated_power_kw: 3000.0
+  base_load_kw: 5000.0
+  interruptible_load_kw: 1000.0
+  grid_power_limit_kw: 3000.0
+  # --- Data source configuration ---
+  # synthetic: mathematical model (default, no files needed)
+  # csv / parquet: load from file (set data_file path)
+  data_source: synthetic
+  data_file: null            # e.g., "data/processed/microgrid_2024.csv"
+  scenario: null             # e.g., "summer", "winter", "summer_extreme"
+  seed: 42
+  soc_min: 0.2
+  soc_max: 0.9
+  soc_optimal_min: 0.3
+  soc_optimal_max: 0.7
+  grid_buy_price: 0.8
+  grid_sell_price: 0.4
+  de_fuel_cost: 0.6
+  ess_degradation_cost: 0.05
+  voltage_limit_pu: 1.05
+  frequency_limit_hz: 0.5
+
+fuzzy:
+  num_rules: 16
+  num_inputs: 4
+  num_outputs: 1
+  membership_type: gaussian
+  reward_shaping_weight_init: 1.0
+  reward_shaping_weight_final: 0.1
+  reward_shaping_decay_steps: 50000
+  lambda_init: 1.0
+  lambda_lr: 0.001
+  lambda_min: 0.0
+  lambda_max: 100.0
+  fcsd_target: 0.9
+  use_expert_rules: true
+  expert_rule_confidence: 0.8
+
+algorithm:
+  name: hfg_sac
+  lr_actor: 0.0003
+  lr_critic: 0.0003
+  lr_alpha: 0.0003
+  gamma: 0.99
+  tau: 0.005
+  alpha: 0.2
+  auto_alpha: true
+  target_update_interval: 1
+  hidden_dims: [256, 256]
+  activation: relu
+  batch_size: 256
+  buffer_size: 1000000
+  max_steps: 1000000
+  warmup_steps: 10000
+  updates_per_step: 1
+  eval_interval: 10000
+  eval_episodes: 10
+  use_safety_layer: true
+  safety_method: fuzzy_lagrangian
+  log_interval: 1000
+
+transfer:
+  enabled: false
+  source_scenario: grid_connected_summer
+  target_scenario: islanded_normal
+  method: progressive_adapter
+  adapter_hidden_dim: 64
+  conservative_init: 3.0
+  conservative_decay_steps: 20000
+  metric_type: fuzzy_rule_similarity
+  few_shot_steps: 5000
+
+seed: 42
+device: auto
+output_dir: outputs
+experiment_name: default
