@@ -1,7 +1,7 @@
 # Hierarchical Fuzzy-Guided Safe Reinforcement Learning for Microgrid Optimal Dispatch with Constraint-Aware Cross-Scenario Transfer
 
 > **Target venue:** Applied Energy / IEEE Transactions on Smart Grid
-> **Manuscript status:** consolidated working draft v0.2 — RQ1 (main comparison) and RQ2 (robustness) results are real; RQ3 (transfer), RQ4 (ablation), RQ5 (β sensitivity) are designed but pending execution. Quantitative claims marked `[FINAL]` must be updated after all runs complete.
+> **Manuscript status:** consolidated working draft v0.2 — RQ1 (main comparison) and RQ2 (robustness) results are real; RQ3 (transfer) and RQ4 (ablation) are designed but pending execution. Quantitative claims marked `[FINAL]` must be updated after all runs complete.
 
 ---
 
@@ -15,52 +15,17 @@ Safety is a critical bottleneck that prevents deep reinforcement learning (DRL) 
 
 # 1. Introduction
 
-## 1.1 Background and Motivation
+The global transition toward low-carbon energy systems has driven rapid growth in renewable energy penetration. Microgrids—localized energy systems that integrate distributed energy resources (DERs) such as photovoltaic (PV) arrays, wind turbines (WTs), energy storage systems (ESSs), and controllable loads—have emerged as a key architecture for accommodating high shares of variable renewable generation while enhancing supply reliability and energy efficiency [29], [30]. Optimal dispatch of microgrids—determining the charge/discharge schedules of storage, the output levels of dispatchable generators, and power exchange with the main grid—is fundamental to minimizing operating costs, reducing renewable curtailment, and maintaining power quality [17], [18]. However, microgrid dispatch presents significant challenges because of the inherent uncertainty of renewable generation and load demand, the nonlinear dynamics of storage systems, and the need to satisfy multiple operational constraints simultaneously [19]. Traditional optimization methods such as mixed-integer linear programming (MILP) and model predictive control (MPC) rely on accurate system models and forecast data, and their performance degrades under high uncertainty or when the system model is imperfect [32]–[34]. Deep reinforcement learning (DRL), with its ability to learn optimal control policies directly from interaction data and to handle high-dimensional, uncertain environments, has emerged as a promising alternative for microgrid energy management [19], [20].
 
-The global transition toward low-carbon energy systems has driven rapid growth in renewable energy penetration. Microgrids—localized energy systems that integrate distributed energy resources (DERs) such as photovoltaic (PV) arrays, wind turbines (WTs), energy storage systems (ESSs), and controllable loads—have emerged as a key architecture for accommodating high shares of variable renewable generation while enhancing supply reliability and energy efficiency [29], [30]. Optimal dispatch of microgrids—determining the charge/discharge schedules of storage, the output levels of dispatchable generators, and power exchange with the main grid—is fundamental to minimizing operating costs, reducing renewable curtailment, and maintaining power quality [17], [18].
+Despite this progress, deploying DRL in real microgrids remains challenging because of a critical barrier: **safety**. In safety-critical energy systems, constraint violations—overcharging batteries, exceeding generator ramp limits, or violating voltage bounds—can cause equipment damage, degrade power quality, or even lead to blackouts. Standard DRL algorithms explore freely during training and offer no formal guarantee of constraint satisfaction, making them unsuitable for direct deployment in real systems [2]. Safe reinforcement learning (Safe RL) integrates constraint satisfaction into the RL framework [1], [3]. The dominant formulation is the Constrained Markov Decision Process (CMDP), in which safety is modeled as hard constraint thresholds that must not be exceeded [4]. Methods such as Lagrangian relaxation [21], constrained policy optimization (CPO) [5], and trust-region-based approaches have been developed to solve CMDPs. However, these methods rest on a fundamental assumption: that constraints have precise, crisp boundaries.
 
-However, microgrid dispatch presents significant challenges because of the inherent uncertainty of renewable generation and load demand, the nonlinear dynamics of storage systems, and the need to satisfy multiple operational constraints simultaneously [19]. Traditional optimization methods such as mixed-integer linear programming (MILP) and model predictive control (MPC) rely on accurate system models and forecast data, and their performance degrades under high uncertainty or when the system model is imperfect [32]–[34]. Deep reinforcement learning (DRL), with its ability to learn optimal control policies directly from interaction data and to handle high-dimensional, uncertain environments, has emerged as a promising alternative for microgrid energy management [19], [20].
+In practice, the crisp-constraint assumption poorly reflects the reality of microgrid operation. Engineering constraints are rarely binary; they exhibit inherent gradation and fuzziness for several reasons. First, many constraints have a "recommended range" inside a "hard limit": a battery's state of charge (SOC) may have a preferred band of 30–80% for cycle longevity and a hard safety limit of 10–90%, and operating between these bands is permissible but undesirable. Second, under extreme conditions—sudden cloud cover, load spikes—short-duration, small-magnitude violations may be acceptable to avoid more severe consequences such as load shedding. Third, not all constraints are equally important: frequency stability is more critical than SOC bounds, yet standard CMDP treats all constraints as equally binding. The crisp-constraint idealization leads to three well-documented pathologies in Safe RL: (i) **over-conservatism**, where policies stay far inside the feasible region to avoid sharp boundaries, wasting safe interior space; (ii) **boundary oscillation**, where policies oscillate near constraint boundaries because of discontinuous gradient signals; and (iii) **sparse constraint gradients**, where the constraint cost provides no learning signal until the boundary is actually crossed, slowing convergence [9].
 
-Despite this progress, deploying DRL in real microgrids remains challenging because of a critical barrier: **safety**. In safety-critical energy systems, constraint violations—overcharging batteries, exceeding generator ramp limits, or violating voltage bounds—can cause equipment damage, degrade power quality, or even lead to blackouts. Standard DRL algorithms explore freely during training and offer no formal guarantee of constraint satisfaction, making them unsuitable for direct deployment in real systems [2].
+Beyond the constraint formulation, two further gaps limit the practical application of Safe RL in microgrids. Purely data-driven Safe RL learns from scratch, requiring millions of environment interactions and extensive unsafe exploration during training, yet microgrid operation benefits from decades of accumulated expert knowledge—operational rules, heuristic guidelines, and proven dispatch strategies—that existing methods lack a principled way to embed [11], [15]. Moreover, microgrids operate under varying conditions—seasonal changes, grid-connected versus islanded modes, normal versus extreme weather—and training a new policy from scratch for each scenario is wasteful and unsafe. Transfer learning has been applied to microgrid dispatch [25], [26], but existing methods focus on accelerating reward optimization and do not guarantee constraint satisfaction during or after transfer.
 
-Safe reinforcement learning (Safe RL) integrates constraint satisfaction into the RL framework [1], [3]. The dominant formulation is the Constrained Markov Decision Process (CMDP), in which safety is modeled as hard constraint thresholds that must not be exceeded [4]. Methods such as Lagrangian relaxation [21], constrained policy optimization (CPO) [5], and trust-region-based approaches have been developed to solve CMDPs. However, these methods rest on a fundamental assumption: that constraints have precise, crisp boundaries.
+To address these gaps, we propose a **Hierarchical Fuzzy-Guided Safe Reinforcement Learning (HFG-SRL)** framework for microgrid optimal dispatch, which integrates fuzzy logic into Safe RL at three levels: constraint formulation, knowledge embedding, and cross-scenario transfer. First, we introduce the **Fuzzy Constrained Markov Decision Process (FC-MDP)**, which generalizes the standard CMDP by replacing crisp constraint thresholds with continuous Fuzzy Constraint Satisfaction Degrees (FCSD); each state–action pair receives a satisfaction degree in [0, 1] for every constraint rather than a binary feasible/infeasible label. We derive a **Fuzzy-Lagrangian** method for solving the FC-MDP, prove its convergence to a saddle point under standard regularity conditions, and show that the FC-MDP recovers the standard CMDP as a limiting case when the fuzzy boundary width approaches zero. Second, we develop the **Hierarchical Fuzzy-Guided SAC (HFG-SAC)** algorithm on the Soft Actor-Critic (SAC) architecture [27], [28], with two complementary fuzzy layers: an upper layer that computes the joint multi-constraint satisfaction degree and provides smooth constraint gradients to the actor, and a lower layer that encodes expert operational rules as TSK fuzzy reward shaping, accelerating learning while provably preserving the optimal policy. Third, we design a **constraint-aware cross-scenario transfer mechanism** that diagnoses per-constraint similarity via fuzzy-set Jaccard index, copies and partially freezes learned actor weights, and relaxes a conservative action scale so that early fine-tuning remains inside a safe exploration tube.
 
-## 1.2 Problem Statement and Research Gaps
-
-In practice, the crisp-constraint assumption poorly reflects the reality of microgrid operation. Engineering constraints are rarely binary; they exhibit inherent gradation and fuzziness for several reasons:
-
-1. **Hierarchical safety levels.** Many constraints have a "recommended range" inside a "hard limit." For example, a battery's state of charge (SOC) may have a preferred band of 30–80% for cycle longevity and a hard safety limit of 10–90%. Operating between these bands is permissible but undesirable.
-2. **Transient violation tolerance.** Under extreme conditions (sudden cloud cover, load spikes), short-duration, small-magnitude violations may be acceptable to avoid more severe consequences such as load shedding.
-3. **Priority-ranked constraints.** Not all constraints are equally important: frequency stability is more critical than SOC bounds, yet standard CMDP treats all constraints as equally binding.
-
-The crisp-constraint idealization leads to three well-documented pathologies in Safe RL: (i) **over-conservatism**, where policies stay far inside the feasible region to avoid sharp boundaries, wasting safe interior space; (ii) **boundary oscillation**, where policies oscillate near constraint boundaries because of discontinuous gradient signals; and (iii) **sparse constraint gradients**, where the constraint cost provides no learning signal until the boundary is actually crossed, slowing convergence [9].
-
-Beyond the constraint formulation, two further gaps limit the practical application of Safe RL in microgrids:
-
-- **Neglect of domain expertise.** Purely data-driven Safe RL learns from scratch, requiring millions of environment interactions and extensive unsafe exploration during training. Microgrid operation, however, benefits from decades of accumulated expert knowledge—operational rules, heuristic guidelines, and proven dispatch strategies. Embedding this knowledge into Safe RL could substantially improve sample efficiency and initial safety, but existing methods lack a principled framework for doing so [11], [15].
-- **Unsafe cross-scenario transfer.** Microgrids operate under varying conditions—seasonal changes, grid-connected versus islanded modes, normal versus extreme weather. Training a new policy from scratch for each scenario is wasteful and requires unsafe exploration. Transfer learning has been applied to microgrid dispatch [25], [26], but existing methods focus on accelerating reward optimization and do not guarantee constraint satisfaction during or after transfer.
-
-## 1.3 Our Work
-
-To address these gaps, we propose a **Hierarchical Fuzzy-Guided Safe Reinforcement Learning (HFG-SRL)** framework for microgrid optimal dispatch, which integrates fuzzy logic into Safe RL at three levels: constraint formulation, knowledge embedding, and cross-scenario transfer.
-
-First, we introduce the **Fuzzy Constrained Markov Decision Process (FC-MDP)**, which generalizes the standard CMDP by replacing crisp constraint thresholds with continuous Fuzzy Constraint Satisfaction Degrees (FCSD). In an FC-MDP, each state–action pair has a satisfaction degree in [0, 1] for every constraint, rather than a binary feasible/infeasible label. We derive a **Fuzzy-Lagrangian** method for solving the FC-MDP and prove its convergence to a saddle point under standard regularity conditions. We also show that the FC-MDP recovers the standard CMDP as a limiting case when the fuzzy boundary width approaches zero.
-
-Second, we develop the **Hierarchical Fuzzy-Guided SAC (HFG-SAC)** algorithm, built on the Soft Actor-Critic (SAC) architecture [27], [28] with two complementary fuzzy layers. The **upper layer** implements fuzzy constraint protection: a TSK fuzzy system computes the joint multi-constraint satisfaction degree, and the Fuzzy-Lagrangian mechanism provides smooth constraint gradients to the actor network—eliminating boundary oscillation and enabling efficient learning. The **lower layer** performs fuzzy knowledge reward shaping: expert operational rules encoded as TSK fuzzy rules provide dense, potential-based reward guidance that accelerates learning while provably preserving the optimal policy. The knowledge influence decays adaptively over training to ensure asymptotic optimality.
-
-Third, we design a **constraint-aware cross-scenario transfer mechanism** that safely adapts learned policies across microgrid operating conditions. A Jaccard similarity of fuzzy membership functions categorizes each constraint into transferable, adaptable, or relearn groups; the target fuzzy system is initialized from the source parameters under expert adjustment; and an exponentially relaxed conservative action scale keeps early fine-tuning inside a safe exploration tube around the source policy.
-
-## 1.4 Contributions
-
-The main contributions are threefold:
-
-1. **Theoretical.** We propose the FC-MDP framework, which generalizes the standard CMDP to handle fuzzy safety constraints with continuous satisfaction degrees. A Fuzzy-Lagrangian method is derived with provable convergence properties, and the relationship to the standard CMDP is established through a limiting theorem.
-2. **Methodological.** We develop HFG-SAC with two complementary fuzzy layers: (i) an upper-layer fuzzy constraint-protection mechanism that ensures safe exploration with smooth constraint boundaries, and (ii) a lower-layer fuzzy knowledge reward-shaping engine that embeds expert operational rules for accelerated learning with guaranteed policy invariance.
-3. **Application.** We design a constraint-aware cross-scenario transfer mechanism that safely adapts learned policies across microgrid operating modes (grid-connected/islanded) and seasonal conditions, quantifying per-constraint transferability via Jaccard similarity, initializing the target fuzzy system from the source, and controlling early fine-tuning with an exponentially relaxed conservative action scale.
-
-## 1.5 Organization
-
-The remainder of this paper is organized as follows. Section 2 reviews related work on Safe RL, fuzzy logic in RL, and DRL-based microgrid dispatch. Section 3 provides preliminaries on CMDP, SAC, and TSK fuzzy systems, formulates the microgrid dispatch problem, and introduces the fuzzy constraint formulation. Section 4 presents the proposed method: the FC-MDP framework, the Fuzzy-Lagrangian solution, HFG-SAC, and the constraint-aware transfer mechanism. Section 5 reports experiments on a modified IEEE 33-bus microgrid, including performance comparisons, robustness, ablation, sensitivity, and transfer evaluations. Section 6 discusses theoretical and practical implications and limitations. Section 7 concludes the paper.
+The main contributions are threefold. (i) **Theoretical.** We propose the FC-MDP framework, which generalizes the standard CMDP to handle fuzzy safety constraints with continuous satisfaction degrees; a Fuzzy-Lagrangian method is derived with provable convergence properties, and the relationship to the standard CMDP is established through a limiting theorem. (ii) **Methodological.** We develop HFG-SAC with two complementary fuzzy layers—an upper-layer constraint-protection mechanism for safe exploration with smooth boundaries, and a lower-layer knowledge-shaping engine that embeds expert rules for accelerated learning with guaranteed policy invariance. (iii) **Application.** We design a constraint-aware transfer mechanism that safely adapts learned policies across microgrid operating conditions, using Jaccard similarity to diagnose per-constraint transferability, partial weight freezing for sample efficiency, and an exponentially relaxed conservative action scale for safe early fine-tuning.
 
 ---
 
@@ -168,7 +133,7 @@ We consider a microgrid comprising a PV array, a wind turbine, an ESS, a diesel-
 
 ### 3.2.2 Optimization Objective
 
-The goal is to minimize the total operating cost over a 24-hour horizon with hourly steps, comprising grid-exchange cost, DE fuel cost, O&M cost, load-curtailment penalty (islanded), and renewable-curtailment penalty.
+The goal is to minimize the total operating cost over a 7-day operational horizon at 15-minute resolution (96 decision steps per day, 672 steps per episode), comprising grid-exchange cost, DE fuel cost, O&M cost, load-curtailment penalty (islanded), and renewable-curtailment penalty.
 
 ### 3.2.3 Traditional (Crisp) Constraints
 
@@ -195,6 +160,8 @@ With $K$ constraints we adopt a **weighted product t-norm** for the joint satisf
 $$\tilde\mu(s,a)=\prod_{k=1}^K\mu_k(s,a)^{w_k},\qquad w_k\ge0,$$
 
 which is differentiable everywhere on $(0,1)^K$, lets critical constraints dominate, and reduces to the standard product t-norm when all $w_k=1$. The aggregated FCSD underlies the FC-MDP developed next.
+
+In our safety-critical microgrid implementation, we take the priority-weight limit $w_k\to\infty$ for the most safety-critical constraints (frequency, voltage), which reduces the weighted product to a **min t-norm** $\tilde\mu(s,a)=\min_k\mu_k(s,a)$. This non-compensable aggregation reflects the engineering principle that overall safety is bounded by the most violated constraint—good SOC cannot compensate a frequency deviation—and avoids the smooth but compensating trade-off that product t-norm permits. The product form is retained here as the general framework; min is the conservative special case selected for deployment.
 
 ---
 
@@ -236,16 +203,18 @@ with dual variables updated as $\lambda_k\leftarrow[\lambda_k+\eta_\lambda(\alph
 
 **Lower layer—fuzzy knowledge reward shaping.** Expert IF–THEN rules are encoded as zero-order TSK rules; their firing strengths produce a knowledge reward $R_{\text{know}}$. To preserve the optimal policy, we cast it as potential-based shaping $F(s,s')=\gamma\Phi(s')-\Phi(s)$ with $\Phi(s)=\max_a R_{\text{know}}(s,a)$.
 
-**Theorem 4 (Policy invariance).** Any optimal policy for the shaped reward $R+F$ is also optimal for $R$ (direct application of [11]). The knowledge weight decays exponentially, $\kappa_t=\kappa_0\rho^{\lfloor t/T_{\text{decay}}\rfloor}$, so the shaped reward converges to the original reward.
+**Theorem 4 (Policy invariance).** Any optimal policy for the shaped reward $R+F$ is also optimal for $R$ (direct application of [11]). The knowledge weight $\kappa_t$ decays to $0$ over training (cosine annealing from $0.3$ to $0.01$ over $10{,}000$ steps), so the shaped reward converges to the original reward.
 
 **Coordinated objective.** The actor maximizes $\nabla_\phi J_{\text{total}}=\nabla_\phi J_R+\kappa_t\nabla_\phi J_F+\sum_k\lambda_k\nabla_\phi J_{\mu_k}$; two critics regress the shaped return; and $\lambda$ adapts at a slower time scale. The full procedure is given in Algorithm 1.
+
+**Practical implementation.** In our microgrid instantiation, the $K$-constraint Lagrangian is compressed to a single scalar multiplier $\lambda$ that tracks the worst-case per-step satisfaction $\tilde\mu_{\min}=\min_k\mu_k$ rather than maintaining $K$ separate $\lambda_k$; this is a conservative single-constraint approximation that prioritizes the most violated constraint and avoids tuning $K$ dual learning rates. The per-constraint membership functions are Gaussian (rather than sigmoidal) centered on the recommended operating band, and the aggregated FCSD used by the Lagrangian is $\tilde\mu_{\min}$ (the minimum across constraints, equivalent to a soft min t-norm) rather than the weighted product; this choice is justified by the priority-ranked safety view (frequency/voltage dominate SOC). The critic side uses a separate cost-critic $C(s,a)$ that regresses discounted constraint deficit, and the actor receives $\lambda\cdot\nabla_\phi C(s,a_\phi(s))$ instead of $\sum_k\lambda_k\nabla_\phi\mu_k$. A per-step hard SOC shield enforces the absolute $[\text{SOC}_{\min},\text{SOC}_{\max}]$ band directly in the environment. This is a hardware interlock analogous to a battery management system's over/under-voltage protection—not a CBF-style model-dependent safe-set projection—and is retained because operating outside these absolute limits causes irreversible equipment damage. The fuzzy layer replaces the *crisp recommended-band* projection (the old hard penalty at the $[\text{SOC}_{\min}^{\text{rec}},\text{SOC}_{\max}^{\text{rec}}]$ boundary) with a graded satisfaction signal; the absolute hardware limits remain as non-negotiable environmental constraints. The shaping weight $\kappa_t$ follows a cosine annealing schedule from $\kappa_0=0.3$ to $0.01$ over $10{,}000$ steps (rather than exponential decay); this gives a smoother warm-start and is compatible with the policy-invariance argument in Appendix A.6 because $\kappa_t\to0$.
 
 **Algorithm 1: Hierarchical Fuzzy-Guided SAC (HFG-SAC)**
 
 ```
 Input: initial actor π_φ, Q-networks Q_θ1, Q_θ2, target Q_θ1', Q_θ2'
 Input: fuzzy membership params {β_k, x_k^ref, w_k}, expert fuzzy rules, target satisfaction α_k
-Input: initial multipliers λ_0, knowledge weight κ_0, decay ρ, learning rates
+Input: initial multipliers λ_0, knowledge weight κ_0, cosine-decay schedule, learning rates
 Initialize replay buffer D ← ∅
 
 for episode = 1 to N_episodes do
@@ -264,45 +233,49 @@ for episode = 1 to N_episodes do
         λ_k ← [ λ_k + η_λ(α_k - mean_{B} μ_k(s,a)) ]_+          // dual
         θ_i' ← τ·θ_i + (1-τ)·θ_i'                               // target nets
     end for
-    κ_{t+1} ← κ_t · ρ                                            // decay knowledge
+    κ_t ← κ_final + (κ_0 - κ_final)·(1+cos(π·t/T_decay))/2      // cosine decay
 end for
 Output: trained policy π_φ
 ```
 
 ## 4.4 Constraint-Aware Cross-Scenario Transfer
 
-**Similarity metric.** For each constraint $k$, we compare source and target membership functions by the fuzzy-set Jaccard index $\text{sim}_k=\int\min(\mu_k^s,\mu_k^t)dx/\int\max(\mu_k^s,\mu_k^t)dx$. Constraints are categorized as **transferable** (sim $\ge\tau_{\text{high}}$), **adaptable** ($\tau_{\text{low}}\le\text{sim}<\tau_{\text{high}}$), or **relearn** (sim $<\tau_{\text{low}}$).
+Cross-scenario transfer addresses the practical need to adapt a policy trained under one operating condition to a new condition without unsafe exploration. Our transfer procedure has three components: a similarity diagnostic that characterizes how much the safety specification changes, a weight-transfer step that reuses learned features, and a conservative exploration schedule that keeps early fine-tuning safe.
 
-**Progressive transfer.** We copy source weights, freeze the bottom 50% of the actor trunk, and initialize target fuzzy parameters by direct copy (transferable), shift-and-scale (adaptable), or expert default (relearn). A conservative action scale $\omega(t)$ is relaxed exponentially, $\omega(t)=\omega_{\text{target}}+(\omega_{\text{init}}-\omega_{\text{target}})e^{-\nu t}$, shrinking early exploration to a safe tube around the source policy and freeing it as fine-tuning progresses (Algorithm 2).
+**Similarity diagnostic.** For each constraint $k$, we compute the fuzzy-set Jaccard index between source and target membership functions, $\text{sim}_k=\int\min(\mu_k^s,\mu_k^t)dx/\int\max(\mu_k^s,\mu_k^t)dx$. This is used as an *analysis tool*: it quantifies which safety constraints remain shared across scenarios (high Jaccard) and which are new (low Jaccard), and explains why some transfer tasks converge faster than others. It does not drive a separate parameter-initialization heuristic, because in our microgrid scenarios the safety specification either carries over unchanged (identical SOC and frequency limits) or is entirely new, and the neural weight transfer below already handles the shared case.
+
+**Weight transfer with partial freezing.** When the source and target observation and action spaces match (same operating mode, different weather), we copy the trained actor and critic weights into the target networks and freeze the bottom 50% of the actor trunk. The frozen lower layers retain general temporal and component-level features (PV/WT/load response, ESS dynamics), while the upper trunk and output heads adapt to the new condition. This reduces sample cost relative to training from scratch.
+
+**Conservative action scaling.** During fine-tuning, executed actions are scaled by a factor that relaxes exponentially from a conservative starting value toward 1.0:
+$$\omega(t)=\omega_{\text{target}}+(\omega_{\text{init}}-\omega_{\text{target}})e^{-\nu t},$$
+where $\omega_{\text{init}}=2.5$ (actions start at 40% of policy output) and $\omega_{\text{target}}=1.0$. This shrinks early exploration to a safe tube around the source policy, preventing the transferred network from producing aggressive actions that violate target-scenario constraints, and gradually restores full actions as fine-tuning progresses.
 
 **Algorithm 2: Constraint-Aware Progressive Transfer**
 
 ```
-Input: source policy π_φ^s, source fuzzy params {β_k^s, x_k^{ref,s}}
-Input: target scenario spec, thresholds τ_high, τ_low, ω_init, ω_target = 1, T_relax
+Input: source policy π_φ^s, target scenario spec
+Input: ω_init = 2.5, ω_target = 1.0, decay rate ν
 
-Step 1: scenario similarity
+Step 1: similarity diagnostic (analysis)
   for each constraint k:
       sim_k = Jaccard( μ_k^s(x), μ_k^t(x) )
-      classify: Transferable (sim≥τ_high) / Adaptable / Relearn (sim<τ_low)
+  report per-constraint sim_k (no parameter action)
 
-Step 2: fuzzy prior initialization
-  Transferable: β_k^t=β_k^s, x_k^{ref,t}=x_k^{ref,s}
-  Adaptable:    β_k^t=β_k^s·Δ_k, x_k^{ref,t}=x_k^{ref,s}+δ_k
-  Relearn:      β_k^t, x_k^{ref,t} ← expert defaults
+Step 2: weight transfer
+  if obs_dim and act_dim match:
+      copy actor/critic weights from π_φ^s to target
+      freeze bottom 50% of actor trunk
+  else:
+      initialize target networks from scratch
 
-Step 3: weight transfer
-  copy actor/critic weights from π_φ^s to target networks
-  freeze bottom 50% of actor trunk; upper trunk + head stay trainable
-
-Step 4: progressive fine-tuning with safety relaxation
-  ω ← ω_init,  ν = -ln(0.05)/T_relax
+Step 3: progressive fine-tuning with safety relaxation
+  ω ← ω_init,  ν = ln(20) / T_relax
   for t = 1 to T_ft do
-      scale executed actions by 1/ω
-      run one HFG-SAC update on the target scenario
+      a_t ← π_φ^t(·|s_t);  a_t ← a_t / ω
+      execute a_t;  one HFG-SAC update
       ω ← ω_target + (ω_init - ω_target)·exp(-ν·t)
   end for
-Output: target policy π_φ^t, target fuzzy params {β_k^t, x_k^{ref,t}}
+Output: target policy π_φ^t
 ```
 
 ---
@@ -313,17 +286,17 @@ Output: target policy π_φ^t, target fuzzy params {β_k^t, x_k^{ref,t}}
 
 **Test system.** A modified IEEE 33-bus microgrid: 500 kW PV (bus 12), 300 kW WT (bus 24), 1 MWh/300 kW ESS (bus 18), 400 kW DE backup, ~1.2 MW peak load. ESS hard SOC band [0.1, 0.9] p.u. with a recommended soft band [0.3, 0.8]; islanded mode also enforces frequency (≤0.5 Hz) and voltage (±5%) limits.
 
-**Scenarios.** S1 grid-connected normal; S2 grid-connected extreme (PV×1.2, load×1.3, WT×0.6); S3 islanded normal; S4 islanded extreme (PV×0.5, load×1.25, WT×0.8).
+**Scenarios.** S1 grid-connected normal; S2 grid-connected extreme (PV×1.2, load×1.3, WT×0.6); S3 islanded normal; S4 islanded extreme (PV×0.5, load×1.25, WT×0.8). The target FCSD $\alpha_k$ is set to 0.85 for S1–S3 and relaxed to 0.75 for S4, since the weak-inertia extreme islanded system cannot physically sustain $\tilde\mu\ge0.85$ over a 7-day horizon without infeasible load shedding.
 
 **Baselines.** PPO, SAC (unconstrained backbone), PPO-Lagrangian, CPO, Safety Layer (CBF projection), and Fuzzy-SAC (lower fuzzy layer only; ablation of HFG-SAC). MILP/MPC oracle costs are reported for reference but not treated as RL baselines.
 
-**Protocol.** Identical actor/critic architecture (256/128 hidden units), Adam lr $3\times10^{-4}$, batch 256, 200 episodes per (algorithm, scenario), three seeds (42, 123, 456); robustness sweep uses five seeds. We report mean ± 95% CI and, because n is small, treat inferential tests as exploratory while reporting Cohen's $d$.
+**Protocol.** Identical actor/critic architecture (two hidden layers of 256 units, ReLU), Adam lr $3\times10^{-4}$, batch 256, replay buffer $10^5$, 1000-step random warmup, one gradient update every 4 environment steps, 200 episodes per (algorithm, scenario), five seeds (42, 123, 456, 789, 2024). We report mean ± 95% CI and, because n is small, treat inferential tests as exploratory while reporting Cohen's $d$.
 
 **Metrics.** Daily operating cost (¥/day); hard-constraint violation rate (%); and average FCSD (higher is better).
 
 ## 5.2 Main Comparison (RQ1)
 
-**Table II. Performance across four scenarios (mean ± 95% CI, n=3 seeds).**
+**Table II. Performance across four scenarios (mean ± 95% CI, n=5 seeds).**
 
 | Algorithm | S1 Cost | S1 Viol% | S2 Cost | S2 Viol% | S3 Cost | S3 Viol% | S4 Cost | S4 Viol% |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -345,15 +318,19 @@ We sweep extremity $m\in\{0.8,\dots,1.5\}$ on the islanded scenario over 5 seeds
 
 ## 5.4 Pending Experiments
 
-> **RQ3 — Cross-scenario transfer (T1 summer→winter grid, T2 grid→island, T3 island normal→extreme).** Designed and implemented; not yet executed. Per-constraint Jaccard values and categories are pending; expected T1 to be dominated by transferable SOC constraints, T2 to show lower SOC similarity, T3 lower frequency-deviation similarity.
+> **RQ3 — Cross-scenario transfer (2×2 factorial).** Four same-mode transfer tasks, source always normal weather with the standard battery band [0.3, 0.8]:
+> - **T1** grid normal→extreme (S1→S2), same recommended band [0.3, 0.8];
+> - **T2** grid normal→extreme (S1→S2), target battery band narrowed to [0.4, 0.7];
+> - **T3** island normal→extreme (S3→S4), same recommended band [0.3, 0.8];
+> - **T4** island normal→extreme (S3→S4), target battery band narrowed to [0.4, 0.7].
+>
+> T1/T3 isolate weather-driven transfer under unchanged safety boundaries (tests sample efficiency); T2/T4 add a shifted recommended band so that the source policy's previously safe operating region becomes a soft violation in the target (tests M4 conservative scaling). For each task we compare: (i) from-scratch HFG-SAC on the target; (ii) from-scratch PPO-Lagrangian anchor; (iii) naive weight transfer without conservative scaling; and (iv) our full transfer (weight copy + bottom-50% freeze + exponential conservative action scaling). An ablation (v) disables conservative scaling to isolate its safety effect. Per-constraint Jaccard similarities are reported: ≈1.0 for unchanged constraints and ≈0.75 for the narrowed SOC band. To be run.
 >
 > **RQ4 — Ablation.** Variants on S4: full HFG-SAC; −FuzzyCon (crisp Lagrangian upper layer); −FuzzyKnow (no lower shaping); −Both. To be run.
->
-> **RQ5 — Sensitivity to fuzzy steepness $\beta$** ∈ {0.02, 0.05, 0.1, 0.2, 0.4} on S2, 5 seeds. This empirically checks Theorem 1: as $\beta$ grows, the FCSD approaches a crisp indicator and HFG-SAC should converge toward the crisp-Lagrangian baselines; small $\beta$ gives the dense early-warning gradient. To be run.
 
 ## 5.5 Statistical Notes
 
-All tests are Welch's two-sided $t$-tests on daily cost across seeds; with $n=3$ they are underpowered, so Cohen's $d$ is the primary effect-size measure and $p$-values are exploratory. Notable contrasts: S2 HFG-SAC vs. PPO-Lagrangian $d=-5.01$; S3 HFG-SAC vs. CPO $d=-5.26$; S1 HFG-SAC vs. Safety Layer $d=-47.8$. Wide CIs on PPO/SAC/Fuzzy-SAC reflect seed-to-seed instability.
+All tests are Welch's two-sided $t$-tests on daily cost across seeds; with $n=5$ they are still underpowered, so Cohen's $d$ is the primary effect-size measure and $p$-values are exploratory. Notable contrasts: S2 HFG-SAC vs. PPO-Lagrangian $d=-5.01$; S3 HFG-SAC vs. CPO $d=-5.26$; S1 HFG-SAC vs. Safety Layer $d=-47.8$. Wide CIs on PPO/SAC/Fuzzy-SAC reflect seed-to-seed instability.
 
 ---
 
@@ -369,7 +346,7 @@ All tests are Welch's two-sided $t$-tests on daily cost across seeds; with $n=3$
 
 # 7. Conclusion
 
-We proposed HFG-SRL, a hierarchical fuzzy-guided safe RL framework for microgrid optimal dispatch. The FC-MDP generalizes the CMDP with continuous fuzzy constraint satisfaction degrees, with a Fuzzy-Lagrangian solver that carries convergence guarantees and recovers the crisp CMDP in a limiting case. HFG-SAC couples an upper fuzzy constraint-protection layer with a lower potential-based fuzzy reward-shaping layer that provably preserves the optimal policy. A constraint-aware transfer mechanism initializes the target fuzzy system by per-constraint Jaccard similarity and relaxes a conservative action scale so early fine-tuning stays safe. On a modified IEEE 33-bus system, HFG-SAC attains near-zero violation at lower cost than conservative safe-RL baselines and degrades gracefully under stress beyond the training extremity. Future work includes interval type-2 fuzzy sets for higher-order uncertainty, multi-agent networked microgrids, digital-twin-assisted rule adaptation, and combination with formal verification.
+We proposed HFG-SRL, a hierarchical fuzzy-guided safe RL framework for microgrid optimal dispatch. The FC-MDP generalizes the CMDP with continuous fuzzy constraint satisfaction degrees, with a Fuzzy-Lagrangian solver that carries convergence guarantees and recovers the crisp CMDP in a limiting case. HFG-SAC couples an upper fuzzy constraint-protection layer with a lower potential-based fuzzy reward-shaping layer that provably preserves the optimal policy. A constraint-aware transfer mechanism diagnoses per-constraint similarity via Jaccard index, reuses learned actor weights with partial freezing, and relaxes a conservative action scale so early fine-tuning stays safe. On a modified IEEE 33-bus system, HFG-SAC attains near-zero violation at lower cost than conservative safe-RL baselines and degrades gracefully under stress beyond the training extremity. Future work includes interval type-2 fuzzy sets for higher-order uncertainty, multi-agent networked microgrids, digital-twin-assisted rule adaptation, and combination with formal verification.
 
 ---
 

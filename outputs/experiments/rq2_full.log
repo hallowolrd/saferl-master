@@ -1,0 +1,436 @@
+Total jobs: 210
+Seeds: [42, 123, 456, 789, 2024]
+Episodes per run: 200
+Workers: 6
+Skip existing: True
+Output: E:\研究\saferl\outputs\experiments\results
+  rq2: 210 jobs
+
+Launching 210 jobs with 6 workers...
+
+[1/210] OK  rq2                seed=456  cost/d=    13,624  viol=  78.4%  fcsd=0.799  (1887s)
+[2/210] OK  rq2                seed=2024  cost/d=     9,283  viol=  98.5%  fcsd=0.777  (1893s)
+[3/210] OK  rq2                seed=42  cost/d=    12,495  viol=  98.8%  fcsd=0.792  (1896s)
+[4/210] OK  rq2                seed=789  cost/d=    11,423  viol=  98.8%  fcsd=0.782  (1908s)
+[5/210] OK  rq2                seed=42  cost/d=    10,847  viol=  97.2%  fcsd=0.795  (1909s)
+[6/210] OK  rq2                seed=123  cost/d=    10,784  viol=  98.8%  fcsd=0.791  (1909s)
+[7/210] OK  rq2                seed=123  cost/d=    16,107  viol=  99.1%  fcsd=0.780  (1869s)
+[8/210] OK  rq2                seed=789  cost/d=    16,050  viol=  97.2%  fcsd=0.792  (1875s)
+[9/210] OK  rq2                seed=456  cost/d=    11,998  viol=  98.4%  fcsd=0.792  (1884s)
+[10/210] OK  rq2                seed=2024  cost/d=    11,135  viol=  98.5%  fcsd=0.789  (1870s)
+[11/210] OK  rq2                seed=123  cost/d=    16,865  viol=  99.4%  fcsd=0.774  (1875s)
+[12/210] OK  rq2                seed=42  cost/d=    16,495  viol=  99.4%  fcsd=0.737  (1878s)
+[13/210] OK  rq2                seed=456  cost/d=    12,659  viol=  97.6%  fcsd=0.793  (1187s)
+[14/210] OK  rq2                seed=2024  cost/d=    14,919  viol=  99.3%  fcsd=0.721  (1167s)
+[15/210] OK  rq2                seed=789  cost/d=    13,107  viol=  97.8%  fcsd=0.794  (1174s)
+[16/210] OK  rq2                seed=42  cost/d=    16,272  viol=  99.3%  fcsd=0.727  (1173s)
+[17/210] OK  rq2                seed=123  cost/d=    16,568  viol=  99.4%  fcsd=0.761  (1168s)
+[18/210] OK  rq2                seed=456  cost/d=    13,433  viol=  97.6%  fcsd=0.794  (1170s)
+[19/210] OK  rq2                seed=2024  cost/d=    13,428  viol=  97.5%  fcsd=0.790  (2611s)
+[20/210] OK  rq2                seed=789  cost/d=    15,558  viol=  90.9%  fcsd=0.769  (2614s)
+[21/210] OK  rq2                seed=42  cost/d=    16,877  viol=  99.4%  fcsd=0.730  (2614s)
+[22/210] OK  rq2                seed=456  cost/d=    13,133  viol=  99.0%  fcsd=0.790  (2610s)
+[23/210] OK  rq2                seed=123  cost/d=    13,255  viol=  98.2%  fcsd=0.791  (2611s)
+[24/210] OK  rq2                seed=789  cost/d=    16,789  viol=  99.3%  fcsd=0.736  (2626s)
+[25/210] OK  rq2                seed=42  cost/d=    14,818  viol=  96.3%  fcsd=0.795  (868s)
+[26/210] OK  rq2                seed=456  cost/d=    12,624  viol=  99.0%  fcsd=0.790  (866s)
+[27/210] OK  rq2                seed=123  cost/d=    13,015  viol=  99.0%  fcsd=0.790  (868s)
+[28/210] OK  rq2                seed=2024  cost/d=    13,562  viol=  96.9%  fcsd=0.789  (875s)
+[29/210] OK  rq2                seed=789  cost/d=    16,461  viol=  99.4%  fcsd=0.726  (870s)
+[30/210] OK  rq2                seed=2024  cost/d=    13,455  viol=  98.8%  fcsd=0.788  (854s)
+[31/210] OK  rq2                seed=42  cost/d=    13,163  viol=   0.9%  fcsd=0.998  (294s)
+[32/210] OK  rq2                seed=123  cost/d=    12,346  viol=  22.8%  fcsd=0.951  (289s)
+[33/210] OK  rq2                seed=42  cost/d=    14,109  viol=  99.3%  fcsd=0.790  (850s)
+[34/210] OK  rq2                seed=456  cost/d=    14,819  viol=  98.8%  fcsd=0.790  (853s)
+[35/210] OK  rq2                seed=123  cost/d=    13,326  viol=  98.8%  fcsd=0.790  (858s)
+[36/210] OK  rq2                seed=789  cost/d=    13,640  viol=  99.0%  fcsd=0.790  (857s)
+[37/210] OK  rq2                seed=2024  cost/d=    17,451  viol=  99.4%  fcsd=0.663  (859s)
+[38/210] OK  rq2                seed=456  cost/d=    14,264  viol=   0.0%  fcsd=1.000  (292s)
+[39/210] OK  rq2                seed=789  cost/d=    13,251  viol=   0.1%  fcsd=0.999  (288s)
+[40/210] OK  rq2                seed=2024  cost/d=     7,862  viol=  99.0%  fcsd=0.791  (286s)
+[41/210] OK  rq2                seed=42  cost/d=    13,709  viol=   0.0%  fcsd=1.000  (288s)
+[42/210] OK  rq2                seed=456  cost/d=    16,673  viol=  23.8%  fcsd=0.950  (284s)
+[43/210] OK  rq2                seed=123  cost/d=    14,400  viol=  23.2%  fcsd=0.951  (289s)
+[44/210] OK  rq2                seed=789  cost/d=    12,392  viol=  58.5%  fcsd=0.876  (281s)
+[45/210] OK  rq2                seed=2024  cost/d=    10,866  viol=  96.1%  fcsd=0.794  (292s)
+[46/210] OK  rq2                seed=42  cost/d=    13,811  viol=  21.4%  fcsd=0.954  (297s)
+[47/210] OK  rq2                seed=123  cost/d=    11,897  viol=  41.7%  fcsd=0.870  (300s)
+[48/210] OK  rq2                seed=456  cost/d=    16,511  viol=  39.6%  fcsd=0.917  (300s)
+[49/210] OK  rq2                seed=789  cost/d=    12,355  viol=  59.2%  fcsd=0.875  (308s)
+[50/210] OK  rq2                seed=2024  cost/d=     9,919  viol=  97.6%  fcsd=0.794  (307s)
+[51/210] OK  rq2                seed=123  cost/d=    14,335  viol=  43.8%  fcsd=0.908  (315s)
+[52/210] OK  rq2                seed=42  cost/d=    14,540  viol=   0.0%  fcsd=1.000  (322s)
+[53/210] OK  rq2                seed=789  cost/d=    12,677  viol=  60.4%  fcsd=0.873  (307s)
+[54/210] OK  rq2                seed=456  cost/d=    16,487  viol=  36.3%  fcsd=0.923  (310s)
+[55/210] OK  rq2                seed=2024  cost/d=     9,469  viol=  99.0%  fcsd=0.792  (303s)
+[56/210] OK  rq2                seed=42  cost/d=    17,111  viol=  42.3%  fcsd=0.912  (303s)
+[57/210] OK  rq2                seed=123  cost/d=    16,462  viol=  22.8%  fcsd=0.952  (286s)
+[58/210] OK  rq2                seed=456  cost/d=    16,627  viol=  18.9%  fcsd=0.959  (286s)
+[59/210] OK  rq2                seed=2024  cost/d=    11,805  viol=  98.2%  fcsd=0.793  (283s)
+[60/210] OK  rq2                seed=789  cost/d=    10,532  viol=  98.8%  fcsd=0.791  (287s)
+[61/210] OK  rq2                seed=42  cost/d=    17,254  viol=  42.0%  fcsd=0.912  (289s)
+[62/210] OK  rq2                seed=123  cost/d=     5,366  viol=  98.4%  fcsd=0.628  (282s)
+[63/210] OK  rq2                seed=456  cost/d=    16,738  viol=  33.3%  fcsd=0.930  (286s)
+[64/210] OK  rq2                seed=2024  cost/d=    15,315  viol=  12.1%  fcsd=0.961  (288s)
+[65/210] OK  rq2                seed=789  cost/d=    11,566  viol=  99.0%  fcsd=0.791  (290s)
+[66/210] OK  rq2                seed=42  cost/d=    17,110  viol=  42.9%  fcsd=0.911  (289s)
+[67/210] OK  rq2                seed=123  cost/d=       351  viol= 100.0%  fcsd=0.470  (290s)
+[68/210] OK  rq2                seed=456  cost/d=    13,156  viol=  98.8%  fcsd=0.791  (286s)
+[69/210] OK  rq2                seed=789  cost/d=    11,344  viol=  94.2%  fcsd=0.801  (290s)
+[70/210] OK  rq2                seed=2024  cost/d=    12,779  viol=  98.8%  fcsd=0.792  (288s)
+[71/210] OK  rq2                seed=42  cost/d=    14,398  viol=   0.0%  fcsd=1.000  (291s)
+[72/210] OK  rq2                seed=123  cost/d=    12,617  viol=   0.0%  fcsd=1.000  (292s)
+[73/210] OK  rq2                seed=456  cost/d=    14,518  viol=   0.0%  fcsd=1.000  (290s)
+[74/210] OK  rq2                seed=789  cost/d=    14,960  viol=   0.0%  fcsd=1.000  (293s)
+[75/210] OK  rq2                seed=2024  cost/d=    14,764  viol=  22.5%  fcsd=0.953  (300s)
+[76/210] OK  rq2                seed=42  cost/d=    14,742  viol=   0.0%  fcsd=1.000  (303s)
+[77/210] OK  rq2                seed=123  cost/d=    13,201  viol=   0.0%  fcsd=1.000  (304s)
+[78/210] OK  rq2                seed=456  cost/d=    10,022  viol=  44.9%  fcsd=0.873  (301s)
+[79/210] OK  rq2                seed=789  cost/d=    13,882  viol=   0.1%  fcsd=1.000  (301s)
+[80/210] OK  rq2                seed=2024  cost/d=    15,372  viol=   0.0%  fcsd=1.000  (300s)
+[81/210] OK  rq2                seed=42  cost/d=    15,455  viol=   0.0%  fcsd=1.000  (287s)
+[82/210] OK  rq2                seed=123  cost/d=    13,515  viol=  23.5%  fcsd=0.950  (290s)
+[83/210] OK  rq2                seed=456  cost/d=    10,346  viol=  25.6%  fcsd=0.916  (287s)
+[84/210] OK  rq2                seed=789  cost/d=    15,495  viol=   0.0%  fcsd=1.000  (290s)
+[85/210] OK  rq2                seed=2024  cost/d=    15,503  viol=   0.0%  fcsd=1.000  (290s)
+[86/210] OK  rq2                seed=42  cost/d=    15,460  viol=   0.0%  fcsd=1.000  (288s)
+[87/210] OK  rq2                seed=123  cost/d=    14,092  viol=   0.0%  fcsd=1.000  (294s)
+[88/210] OK  rq2                seed=789  cost/d=    15,761  viol=   0.0%  fcsd=1.000  (288s)
+[89/210] OK  rq2                seed=456  cost/d=    12,165  viol=  11.6%  fcsd=0.960  (294s)
+[90/210] OK  rq2                seed=2024  cost/d=    15,624  viol=   0.0%  fcsd=1.000  (289s)
+[91/210] OK  rq2                seed=42  cost/d=    15,812  viol=   0.0%  fcsd=1.000  (290s)
+[92/210] OK  rq2                seed=123  cost/d=    16,716  viol=   0.0%  fcsd=1.000  (291s)
+[93/210] OK  rq2                seed=456  cost/d=    13,855  viol=  15.0%  fcsd=0.954  (294s)
+[94/210] OK  rq2                seed=789  cost/d=    15,394  viol=   0.0%  fcsd=1.000  (294s)
+[95/210] OK  rq2                seed=2024  cost/d=    15,814  viol=   0.1%  fcsd=0.999  (295s)
+[96/210] OK  rq2                seed=42  cost/d=    15,998  viol=   0.4%  fcsd=0.998  (297s)
+[97/210] OK  rq2                seed=123  cost/d=    17,179  viol=   0.0%  fcsd=1.000  (298s)
+[98/210] OK  rq2                seed=456  cost/d=    14,897  viol=   1.9%  fcsd=0.994  (297s)
+[99/210] OK  rq2                seed=789  cost/d=    16,101  viol=   0.0%  fcsd=1.000  (315s)
+[100/210] OK  rq2                seed=2024  cost/d=    15,591  viol=  25.0%  fcsd=0.947  (314s)
+[101/210] OK  rq2                seed=42  cost/d=    16,489  viol=   0.9%  fcsd=0.997  (315s)
+[102/210] OK  rq2                seed=123  cost/d=    17,452  viol=  16.5%  fcsd=0.966  (320s)
+[103/210] OK  rq2                seed=789  cost/d=    16,337  viol=  19.6%  fcsd=0.959  (313s)
+[104/210] OK  rq2                seed=456  cost/d=    15,755  viol=   5.1%  fcsd=0.984  (318s)
+[105/210] OK  rq2                seed=2024  cost/d=    15,618  viol=  24.9%  fcsd=0.947  (294s)
+[106/210] OK  rq2                seed=123  cost/d=    10,002  viol=  47.9%  fcsd=0.845  (896s)
+[107/210] OK  rq2                seed=2024  cost/d=     7,237  viol=  60.3%  fcsd=0.808  (883s)
+[108/210] OK  rq2                seed=42  cost/d=    13,264  viol=  21.9%  fcsd=0.929  (910s)
+[109/210] OK  rq2                seed=789  cost/d=     9,029  viol=  48.1%  fcsd=0.848  (892s)
+[110/210] OK  rq2                seed=456  cost/d=     9,837  viol=  35.9%  fcsd=0.887  (917s)
+[111/210] OK  rq2                seed=42  cost/d=     9,374  viol=  42.7%  fcsd=0.864  (917s)
+[112/210] OK  rq2                seed=123  cost/d=     6,820  viol=  65.9%  fcsd=0.791  (898s)
+[113/210] OK  rq2                seed=789  cost/d=    13,428  viol=   7.1%  fcsd=0.977  (898s)
+[114/210] OK  rq2                seed=2024  cost/d=    13,635  viol=   4.6%  fcsd=0.985  (898s)
+[115/210] OK  rq2                seed=456  cost/d=     9,842  viol=  34.5%  fcsd=0.890  (911s)
+[116/210] OK  rq2                seed=42  cost/d=     7,785  viol=  68.3%  fcsd=0.785  (907s)
+[117/210] OK  rq2                seed=123  cost/d=    11,843  viol=  29.8%  fcsd=0.907  (897s)
+[118/210] OK  rq2                seed=2024  cost/d=    10,124  viol=  38.2%  fcsd=0.879  (894s)
+[119/210] OK  rq2                seed=789  cost/d=     7,980  viol=  60.1%  fcsd=0.811  (898s)
+[120/210] OK  rq2                seed=456  cost/d=    11,156  viol=  35.0%  fcsd=0.889  (909s)
+[121/210] OK  rq2                seed=42  cost/d=     7,602  viol=  74.4%  fcsd=0.762  (910s)
+[122/210] OK  rq2                seed=123  cost/d=     9,035  viol=  57.6%  fcsd=0.810  (896s)
+[123/210] OK  rq2                seed=456  cost/d=    13,791  viol=   6.2%  fcsd=0.978  (919s)
+[124/210] OK  rq2                seed=2024  cost/d=     7,646  viol=  71.1%  fcsd=0.773  (897s)
+[125/210] OK  rq2                seed=789  cost/d=    11,843  viol=  37.6%  fcsd=0.880  (902s)
+[126/210] OK  rq2                seed=42  cost/d=    11,558  viol=  48.8%  fcsd=0.836  (906s)
+[127/210] OK  rq2                seed=123  cost/d=     9,778  viol=  56.5%  fcsd=0.820  (905s)
+[128/210] OK  rq2                seed=456  cost/d=     9,586  viol=  54.0%  fcsd=0.827  (907s)
+[129/210] OK  rq2                seed=789  cost/d=    11,455  viol=  39.9%  fcsd=0.872  (905s)
+[130/210] OK  rq2                seed=2024  cost/d=    10,233  viol=  46.6%  fcsd=0.852  (909s)
+[131/210] OK  rq2                seed=123  cost/d=     9,023  viol=  69.6%  fcsd=0.771  (910s)
+[132/210] OK  rq2                seed=42  cost/d=    15,276  viol=  21.1%  fcsd=0.934  (924s)
+[133/210] OK  rq2                seed=456  cost/d=    12,108  viol=  45.1%  fcsd=0.856  (909s)
+[134/210] OK  rq2                seed=789  cost/d=    12,423  viol=  35.4%  fcsd=0.887  (916s)
+[135/210] OK  rq2                seed=2024  cost/d=     8,938  viol=  70.2%  fcsd=0.768  (909s)
+[136/210] OK  rq2                seed=123  cost/d=     7,619  viol=  91.5%  fcsd=0.673  (893s)
+[137/210] OK  rq2                seed=42  cost/d=    12,566  viol=  47.3%  fcsd=0.849  (918s)
+[138/210] OK  rq2                seed=789  cost/d=    10,772  viol=  68.5%  fcsd=0.770  (896s)
+[139/210] OK  rq2                seed=456  cost/d=    11,824  viol=  55.2%  fcsd=0.825  (913s)
+[140/210] OK  rq2                seed=2024  cost/d=     9,725  viol=  71.1%  fcsd=0.775  (905s)
+[141/210] OK  rq2                seed=42  cost/d=    11,372  viol=   0.3%  fcsd=0.995  (1172s)
+[142/210] OK  rq2                seed=123  cost/d=    12,082  viol=   0.3%  fcsd=0.992  (1162s)
+[143/210] OK  rq2                seed=789  cost/d=    11,808  viol=   0.1%  fcsd=0.995  (1149s)
+[144/210] OK  rq2                seed=456  cost/d=    11,950  viol=   0.3%  fcsd=0.995  (1166s)
+[145/210] OK  rq2                seed=2024  cost/d=    12,961  viol=   0.4%  fcsd=0.994  (1162s)
+[146/210] OK  rq2                seed=42  cost/d=    12,275  viol=   0.3%  fcsd=0.991  (1152s)
+[147/210] OK  rq2                seed=123  cost/d=    12,348  viol=   0.7%  fcsd=0.990  (1161s)
+[148/210] OK  rq2                seed=789  cost/d=    12,550  viol=   0.0%  fcsd=0.992  (1140s)
+[149/210] OK  rq2                seed=456  cost/d=    12,234  viol=   0.7%  fcsd=0.995  (1146s)
+[150/210] OK  rq2                seed=2024  cost/d=    11,010  viol=   2.1%  fcsd=0.983  (1154s)
+[151/210] OK  rq2                seed=123  cost/d=    12,134  viol=   1.3%  fcsd=0.988  (1144s)
+[152/210] OK  rq2                seed=42  cost/d=    12,507  viol=   0.3%  fcsd=0.991  (1154s)
+[153/210] OK  rq2                seed=456  cost/d=    12,817  viol=   0.6%  fcsd=0.997  (1154s)
+[154/210] OK  rq2                seed=789  cost/d=    12,762  viol=   0.3%  fcsd=0.992  (1137s)
+[155/210] OK  rq2                seed=2024  cost/d=    12,226  viol=   2.5%  fcsd=0.986  (1145s)
+[156/210] OK  rq2                seed=42  cost/d=    12,644  viol=   0.4%  fcsd=0.990  (1138s)
+[157/210] OK  rq2                seed=123  cost/d=    12,777  viol=   0.4%  fcsd=0.993  (1140s)
+[158/210] OK  rq2                seed=456  cost/d=    13,242  viol=   0.7%  fcsd=0.992  (1150s)
+[159/210] OK  rq2                seed=789  cost/d=    12,747  viol=   0.9%  fcsd=0.991  (1153s)
+[160/210] OK  rq2                seed=2024  cost/d=    14,195  viol=   1.9%  fcsd=0.992  (1175s)
+[161/210] OK  rq2                seed=42  cost/d=    13,367  viol=   1.2%  fcsd=0.988  (1169s)
+[162/210] OK  rq2                seed=123  cost/d=    13,525  viol=   1.0%  fcsd=0.989  (1167s)
+[163/210] OK  rq2                seed=456  cost/d=    13,195  viol=   1.5%  fcsd=0.987  (1167s)
+[164/210] OK  rq2                seed=789  cost/d=    13,016  viol=   1.3%  fcsd=0.987  (1157s)
+[165/210] OK  rq2                seed=2024  cost/d=    14,492  viol=   1.5%  fcsd=0.987  (1153s)
+[166/210] OK  rq2                seed=42  cost/d=    13,621  viol=   2.1%  fcsd=0.985  (1153s)
+[167/210] OK  rq2                seed=123  cost/d=    13,199  viol=   1.3%  fcsd=0.990  (1148s)
+[168/210] OK  rq2                seed=789  cost/d=    13,306  viol=   3.3%  fcsd=0.982  (1132s)
+[169/210] OK  rq2                seed=456  cost/d=    13,981  viol=   1.8%  fcsd=0.987  (1147s)
+[170/210] OK  rq2                seed=2024  cost/d=    13,328  viol=   3.0%  fcsd=0.982  (1142s)
+[171/210] OK  rq2                seed=42  cost/d=    13,827  viol=   3.4%  fcsd=0.981  (1150s)
+[172/210] OK  rq2                seed=789  cost/d=    14,412  viol=   2.8%  fcsd=0.982  (1146s)
+[173/210] OK  rq2                seed=456  cost/d=    13,729  viol=   4.5%  fcsd=0.978  (1157s)
+[174/210] OK  rq2                seed=123  cost/d=    13,569  viol=   5.2%  fcsd=0.977  (1159s)
+[175/210] OK  rq2                seed=2024  cost/d=    14,720  viol=   5.8%  fcsd=0.974  (1150s)
+[176/210] OK  rq2                seed=42  cost/d=    11,741  viol=   0.1%  fcsd=0.993  (1709s)
+[177/210] OK  rq2                seed=123  cost/d=    11,874  viol=   0.3%  fcsd=0.992  (1708s)
+[178/210] OK  rq2                seed=456  cost/d=    11,966  viol=   0.4%  fcsd=0.994  (1717s)
+[179/210] OK  rq2                seed=2024  cost/d=    11,839  viol=   0.4%  fcsd=0.993  (1713s)
+[180/210] OK  rq2                seed=789  cost/d=    12,949  viol=   0.4%  fcsd=0.995  (1715s)
+[181/210] OK  rq2                seed=42  cost/d=    12,354  viol=   0.3%  fcsd=0.992  (1734s)
+[182/210] OK  rq2                seed=123  cost/d=    12,479  viol=   0.4%  fcsd=0.992  (1706s)
+[183/210] OK  rq2                seed=456  cost/d=    11,902  viol=   0.7%  fcsd=0.992  (1696s)
+[184/210] OK  rq2                seed=789  cost/d=    12,900  viol=   0.3%  fcsd=0.994  (1703s)
+[185/210] OK  rq2                seed=2024  cost/d=    12,180  viol=   0.4%  fcsd=0.992  (1710s)
+[186/210] OK  rq2                seed=42  cost/d=    12,709  viol=   0.1%  fcsd=0.991  (1714s)
+[187/210] OK  rq2                seed=123  cost/d=    12,617  viol=   0.3%  fcsd=0.994  (1705s)
+[188/210] OK  rq2                seed=456  cost/d=    12,620  viol=   0.9%  fcsd=0.994  (1711s)
+[189/210] OK  rq2                seed=789  cost/d=    13,784  viol=   0.1%  fcsd=0.994  (1711s)
+[190/210] OK  rq2                seed=123  cost/d=    13,289  viol=   0.6%  fcsd=0.994  (1701s)
+[191/210] OK  rq2                seed=2024  cost/d=    12,644  viol=   0.6%  fcsd=0.991  (1717s)
+[192/210] OK  rq2                seed=42  cost/d=    12,827  viol=   0.4%  fcsd=0.990  (1714s)
+[193/210] OK  rq2                seed=456  cost/d=    12,939  viol=   0.9%  fcsd=0.990  (1704s)
+[194/210] OK  rq2                seed=789  cost/d=    13,024  viol=   0.7%  fcsd=0.991  (1695s)
+[195/210] OK  rq2                seed=2024  cost/d=    11,915  viol=   2.2%  fcsd=0.984  (1708s)
+[196/210] OK  rq2                seed=456  cost/d=    13,183  viol=   0.9%  fcsd=0.992  (1708s)
+[197/210] OK  rq2                seed=42  cost/d=    12,832  viol=   1.2%  fcsd=0.988  (1717s)
+[198/210] OK  rq2                seed=123  cost/d=    13,862  viol=   0.7%  fcsd=0.992  (1717s)
+[199/210] OK  rq2                seed=789  cost/d=    13,046  viol=   1.8%  fcsd=0.986  (1708s)
+[200/210] OK  rq2                seed=2024  cost/d=    13,050  viol=   1.5%  fcsd=0.987  (1984s)
+[201/210] OK  rq2                seed=42  cost/d=    15,598  viol=   0.7%  fcsd=0.994  (2142s)
+[202/210] OK  rq2                seed=789  cost/d=    13,343  viol=   3.0%  fcsd=0.983  (2081s)
+[203/210] OK  rq2                seed=123  cost/d=    14,318  viol=   1.3%  fcsd=0.991  (2090s)
+[204/210] OK  rq2                seed=456  cost/d=    14,109  viol=   0.7%  fcsd=0.991  (2098s)
+[205/210] OK  rq2                seed=2024  cost/d=    13,235  viol=   2.2%  fcsd=0.984  (2089s)
+[206/210] OK  rq2                seed=42  cost/d=    15,453  viol=   3.1%  fcsd=0.982  (1802s)
+[207/210] OK  rq2                seed=123  cost/d=    14,622  viol=   2.2%  fcsd=0.987  (1538s)
+[208/210] OK  rq2                seed=789  cost/d=    14,274  viol=   3.4%  fcsd=0.979  (1385s)
+[209/210] OK  rq2                seed=456  cost/d=    14,490  viol=   1.8%  fcsd=0.994  (1391s)
+[210/210] OK  rq2                seed=2024  cost/d=    15,248  viol=   5.2%  fcsd=0.976  (1383s)
+  [sac on extremity_0.8 seed=42] cost=75929.1  viol=97.17%  fcsd=0.7954  time=1898.1s
+  [sac on extremity_1.1 seed=42] cost=115467.4  viol=99.40%  fcsd=0.7375  time=1872.3s
+  [sac on extremity_1.2 seed=456] cost=94030.8  viol=97.62%  fcsd=0.7944  time=1165.9s
+  [sac on extremity_1.3 seed=789] cost=117524.9  viol=99.26%  fcsd=0.7364  time=2618.9s
+  [sac on extremity_1.4 seed=2024] cost=94182.9  viol=98.81%  fcsd=0.7884  time=850.2s
+  [ppo_lagrangian on extremity_0.8 seed=42] cost=92143.2  viol=0.89%  fcsd=0.9983  time=291.7s
+  [ppo_lagrangian on extremity_0.8 seed=123] cost=86418.9  viol=22.77%  fcsd=0.9514  time=286.9s
+  [ppo_lagrangian on extremity_0.8 seed=456] cost=99847.5  viol=0.00%  fcsd=0.9997  time=290.2s
+  [ppo_lagrangian on extremity_1.0 seed=789] cost=86744.0  viol=58.48%  fcsd=0.8764  time=279.2s
+  [ppo_lagrangian on extremity_1.1 seed=2024] cost=69433.8  viol=97.62%  fcsd=0.7945  time=304.5s
+  [ppo_lagrangian on extremity_1.3 seed=42] cost=119779.6  viol=42.26%  fcsd=0.9115  time=300.4s
+  [ppo_lagrangian on extremity_1.4 seed=123] cost=37563.7  viol=98.36%  fcsd=0.6285  time=280.3s
+  [ppo_lagrangian on extremity_1.5 seed=456] cost=92093.0  viol=98.81%  fcsd=0.7912  time=283.3s
+  [cpo on extremity_0.8 seed=789] cost=104721.0  viol=0.00%  fcsd=1.0000  time=290.8s
+  [cpo on extremity_1.0 seed=2024] cost=107606.7  viol=0.00%  fcsd=1.0000  time=297.7s
+  [cpo on extremity_1.2 seed=42] cost=108219.6  viol=0.00%  fcsd=1.0000  time=286.0s
+  [cpo on extremity_1.3 seed=123] cost=117014.5  viol=0.00%  fcsd=0.9999  time=288.9s
+  [cpo on extremity_1.4 seed=456] cost=104278.7  viol=1.93%  fcsd=0.9941  time=295.6s
+  [cpo on extremity_1.5 seed=789] cost=114359.7  viol=19.64%  fcsd=0.9586  time=311.3s
+  [safety_layer on extremity_0.8 seed=789] cost=63200.4  viol=48.07%  fcsd=0.8480  time=888.1s
+  [safety_layer on extremity_1.0 seed=2024] cost=95447.4  viol=4.61%  fcsd=0.9850  time=893.9s
+  [safety_layer on extremity_1.1 seed=2024] cost=70866.5  viol=38.24%  fcsd=0.8792  time=890.3s
+  [safety_layer on extremity_1.2 seed=789] cost=82899.7  viol=37.65%  fcsd=0.8803  time=897.1s
+  [safety_layer on extremity_1.4 seed=42] cost=106931.7  viol=21.13%  fcsd=0.9343  time=918.1s
+  [safety_layer on extremity_1.5 seed=456] cost=82769.8  viol=55.21%  fcsd=0.8253  time=907.7s
+  [fuzzy_sac on extremity_0.8 seed=2024] cost=90725.0  viol=0.45%  fcsd=0.9940  time=1152.2s
+  [fuzzy_sac on extremity_1.1 seed=42] cost=87548.7  viol=0.30%  fcsd=0.9909  time=1145.8s
+  [fuzzy_sac on extremity_1.2 seed=456] cost=92696.2  viol=0.74%  fcsd=0.9925  time=1139.3s
+  [fuzzy_sac on extremity_1.3 seed=789] cost=91110.3  viol=1.34%  fcsd=0.9874  time=1148.8s
+  [fuzzy_sac on extremity_1.4 seed=2024] cost=93292.7  viol=2.98%  fcsd=0.9817  time=1134.2s
+  [hfg_sac on extremity_0.8 seed=42] cost=82185.2  viol=0.15%  fcsd=0.9928  time=1700.6s
+  [hfg_sac on extremity_1.0 seed=123] cost=87351.9  viol=0.45%  fcsd=0.9916  time=1697.8s
+  [hfg_sac on extremity_1.1 seed=456] cost=88337.7  viol=0.89%  fcsd=0.9942  time=1698.7s
+  [hfg_sac on extremity_1.2 seed=789] cost=91170.0  viol=0.74%  fcsd=0.9914  time=1685.9s
+  [hfg_sac on extremity_1.3 seed=2024] cost=91349.2  viol=1.49%  fcsd=0.9867  time=1971.0s
+  [hfg_sac on extremity_1.5 seed=42] cost=108170.5  viol=3.12%  fcsd=0.9817  time=1793.7s
+  [sac on extremity_1.0 seed=42] cost=87464.4  viol=98.81%  fcsd=0.7919  time=1885.0s
+  [sac on extremity_1.0 seed=789] cost=112349.6  viol=97.17%  fcsd=0.7921  time=1868.5s
+  [sac on extremity_1.1 seed=789] cost=91746.4  viol=97.77%  fcsd=0.7941  time=1171.1s
+  [sac on extremity_1.3 seed=42] cost=118141.2  viol=99.40%  fcsd=0.7300  time=2608.3s
+  [sac on extremity_1.4 seed=123] cost=91104.7  viol=98.96%  fcsd=0.7902  time=863.4s
+  [sac on extremity_1.5 seed=456] cost=103730.3  viol=98.81%  fcsd=0.7904  time=850.0s
+  [ppo_lagrangian on extremity_0.8 seed=2024] cost=55032.3  viol=98.96%  fcsd=0.7912  time=283.6s
+  [ppo_lagrangian on extremity_1.1 seed=42] cost=96674.3  viol=21.43%  fcsd=0.9544  time=294.0s
+  [ppo_lagrangian on extremity_1.2 seed=123] cost=100343.8  viol=43.75%  fcsd=0.9079  time=312.9s
+  [ppo_lagrangian on extremity_1.3 seed=123] cost=115235.2  viol=22.77%  fcsd=0.9520  time=284.2s
+  [ppo_lagrangian on extremity_1.4 seed=456] cost=117169.2  viol=33.33%  fcsd=0.9299  time=284.5s
+  [ppo_lagrangian on extremity_1.5 seed=789] cost=79407.0  viol=94.20%  fcsd=0.8011  time=288.0s
+  [cpo on extremity_0.8 seed=2024] cost=103347.9  viol=22.47%  fcsd=0.9526  time=297.9s
+  [cpo on extremity_1.1 seed=42] cost=108186.2  viol=0.00%  fcsd=1.0000  time=285.0s
+  [cpo on extremity_1.2 seed=123] cost=98647.1  viol=0.00%  fcsd=0.9999  time=291.9s
+  [cpo on extremity_1.3 seed=456] cost=96986.8  viol=15.03%  fcsd=0.9541  time=291.7s
+  [cpo on extremity_1.4 seed=789] cost=112710.3  viol=0.00%  fcsd=0.9995  time=313.6s
+  [cpo on extremity_1.5 seed=2024] cost=109324.2  viol=24.85%  fcsd=0.9474  time=292.1s
+  [safety_layer on extremity_1.0 seed=42] cost=65617.0  viol=42.71%  fcsd=0.8643  time=912.6s
+  [safety_layer on extremity_1.1 seed=123] cost=82898.3  viol=29.76%  fcsd=0.9069  time=893.1s
+  [safety_layer on extremity_1.2 seed=456] cost=96538.2  viol=6.25%  fcsd=0.9776  time=914.9s
+  [safety_layer on extremity_1.3 seed=789] cost=80184.9  viol=39.88%  fcsd=0.8716  time=900.2s
+  [safety_layer on extremity_1.4 seed=2024] cost=62563.8  viol=70.24%  fcsd=0.7681  time=904.8s
+  [fuzzy_sac on extremity_0.8 seed=42] cost=79601.3  viol=0.30%  fcsd=0.9955  time=1163.8s
+  [fuzzy_sac on extremity_1.0 seed=123] cost=86432.6  viol=0.74%  fcsd=0.9901  time=1152.3s
+  [fuzzy_sac on extremity_1.1 seed=456] cost=89720.7  viol=0.60%  fcsd=0.9966  time=1145.9s
+  [fuzzy_sac on extremity_1.2 seed=789] cost=89228.1  viol=0.89%  fcsd=0.9910  time=1145.1s
+  [fuzzy_sac on extremity_1.3 seed=2024] cost=101443.5  viol=1.49%  fcsd=0.9870  time=1144.8s
+  [fuzzy_sac on extremity_1.5 seed=42] cost=96790.5  viol=3.42%  fcsd=0.9806  time=1143.8s
+  [hfg_sac on extremity_0.8 seed=123] cost=83116.4  viol=0.30%  fcsd=0.9919  time=1700.1s
+  [hfg_sac on extremity_1.0 seed=456] cost=83313.5  viol=0.74%  fcsd=0.9924  time=1687.0s
+  [hfg_sac on extremity_1.1 seed=789] cost=96489.8  viol=0.15%  fcsd=0.9938  time=1699.4s
+  [hfg_sac on extremity_1.2 seed=2024] cost=83404.8  viol=2.23%  fcsd=0.9840  time=1699.2s
+  [hfg_sac on extremity_1.4 seed=42] cost=109185.3  viol=0.74%  fcsd=0.9937  time=2132.9s
+  [hfg_sac on extremity_1.5 seed=123] cost=102357.3  viol=2.23%  fcsd=0.9870  time=1530.3s
+  [sac on extremity_0.8 seed=456] cost=95365.8  viol=78.42%  fcsd=0.7986  time=1876.1s
+  [sac on extremity_1.0 seed=123] cost=112752.4  viol=99.11%  fcsd=0.7804  time=1863.1s
+  [sac on extremity_1.1 seed=456] cost=88614.9  viol=97.62%  fcsd=0.7930  time=1183.9s
+  [sac on extremity_1.2 seed=789] cost=108905.1  viol=90.92%  fcsd=0.7694  time=2608.0s
+  [sac on extremity_1.4 seed=42] cost=103723.0  viol=96.28%  fcsd=0.7954  time=864.9s
+  [sac on extremity_1.5 seed=42] cost=98759.6  viol=99.26%  fcsd=0.7896  time=846.4s
+  [ppo_lagrangian on extremity_0.8 seed=789] cost=92755.3  viol=0.15%  fcsd=0.9994  time=286.5s
+  [ppo_lagrangian on extremity_1.0 seed=2024] cost=76065.1  viol=96.13%  fcsd=0.7940  time=289.2s
+  [ppo_lagrangian on extremity_1.2 seed=42] cost=101782.3  viol=0.00%  fcsd=1.0000  time=319.7s
+  [ppo_lagrangian on extremity_1.3 seed=456] cost=116387.7  viol=18.90%  fcsd=0.9595  time=284.3s
+  [ppo_lagrangian on extremity_1.4 seed=789] cost=80960.4  viol=98.96%  fcsd=0.7911  time=288.1s
+  [cpo on extremity_0.8 seed=42] cost=100787.3  viol=0.00%  fcsd=0.9999  time=289.6s
+  [cpo on extremity_1.0 seed=123] cost=92408.0  viol=0.00%  fcsd=0.9997  time=301.9s
+  [cpo on extremity_1.1 seed=456] cost=72420.7  viol=25.60%  fcsd=0.9158  time=285.8s
+  [cpo on extremity_1.2 seed=789] cost=110324.3  viol=0.00%  fcsd=0.9997  time=286.5s
+  [cpo on extremity_1.3 seed=789] cost=107760.5  viol=0.00%  fcsd=0.9999  time=291.8s
+  [cpo on extremity_1.4 seed=2024] cost=109134.1  viol=25.00%  fcsd=0.9468  time=311.8s
+  [safety_layer on extremity_0.8 seed=42] cost=92846.2  viol=21.88%  fcsd=0.9285  time=905.1s
+  [safety_layer on extremity_1.0 seed=789] cost=93995.5  viol=7.14%  fcsd=0.9768  time=894.1s
+  [safety_layer on extremity_1.1 seed=789] cost=55858.6  viol=60.12%  fcsd=0.8111  time=893.4s
+  [safety_layer on extremity_1.2 seed=2024] cost=53525.4  viol=71.13%  fcsd=0.7733  time=893.0s
+  [safety_layer on extremity_1.3 seed=2024] cost=71634.0  viol=46.58%  fcsd=0.8522  time=904.4s
+  [safety_layer on extremity_1.5 seed=42] cost=87959.5  viol=47.32%  fcsd=0.8494  time=914.3s
+  [fuzzy_sac on extremity_0.8 seed=456] cost=83647.8  viol=0.30%  fcsd=0.9948  time=1157.6s
+  [fuzzy_sac on extremity_1.0 seed=2024] cost=77067.4  viol=2.08%  fcsd=0.9833  time=1145.1s
+  [fuzzy_sac on extremity_1.2 seed=42] cost=88504.7  viol=0.45%  fcsd=0.9903  time=1130.0s
+  [fuzzy_sac on extremity_1.3 seed=123] cost=94678.1  viol=1.04%  fcsd=0.9887  time=1158.2s
+  [fuzzy_sac on extremity_1.4 seed=456] cost=97868.7  viol=1.79%  fcsd=0.9866  time=1137.2s
+  [fuzzy_sac on extremity_1.5 seed=2024] cost=103043.4  viol=5.80%  fcsd=0.9737  time=1142.8s
+  [hfg_sac on extremity_1.0 seed=42] cost=86475.2  viol=0.30%  fcsd=0.9925  time=1725.5s
+  [hfg_sac on extremity_1.1 seed=123] cost=88317.3  viol=0.30%  fcsd=0.9936  time=1696.2s
+  [hfg_sac on extremity_1.2 seed=456] cost=90571.3  viol=0.89%  fcsd=0.9900  time=1695.6s
+  [hfg_sac on extremity_1.3 seed=789] cost=91323.6  viol=1.79%  fcsd=0.9861  time=1696.7s
+  [hfg_sac on extremity_1.4 seed=2024] cost=92644.5  viol=2.23%  fcsd=0.9839  time=2080.3s
+  [sac on extremity_0.8 seed=2024] cost=64979.3  viol=98.51%  fcsd=0.7767  time=1882.2s
+  [sac on extremity_1.0 seed=456] cost=83983.5  viol=98.36%  fcsd=0.7918  time=1877.6s
+  [sac on extremity_1.1 seed=2024] cost=104431.7  viol=99.26%  fcsd=0.7207  time=1163.9s
+  [sac on extremity_1.2 seed=2024] cost=93997.1  viol=97.47%  fcsd=0.7899  time=2604.5s
+  [sac on extremity_1.3 seed=2024] cost=94937.2  viol=96.88%  fcsd=0.7895  time=870.4s
+  [sac on extremity_1.5 seed=789] cost=95482.3  viol=98.96%  fcsd=0.7903  time=853.0s
+  [ppo_lagrangian on extremity_1.0 seed=123] cost=100798.4  viol=23.21%  fcsd=0.9510  time=287.3s
+  [ppo_lagrangian on extremity_1.1 seed=789] cost=86487.6  viol=59.23%  fcsd=0.8750  time=305.2s
+  [ppo_lagrangian on extremity_1.2 seed=2024] cost=66283.7  viol=98.96%  fcsd=0.7916  time=300.5s
+  [ppo_lagrangian on extremity_1.4 seed=42] cost=120775.7  viol=41.96%  fcsd=0.9116  time=287.0s
+  [ppo_lagrangian on extremity_1.5 seed=123] cost=2455.3  viol=100.00%  fcsd=0.4701  time=288.5s
+  [cpo on extremity_0.8 seed=456] cost=101628.8  viol=0.00%  fcsd=1.0000  time=288.2s
+  [cpo on extremity_1.0 seed=789] cost=97171.2  viol=0.15%  fcsd=0.9997  time=299.5s
+  [cpo on extremity_1.1 seed=2024] cost=108523.8  viol=0.00%  fcsd=0.9998  time=288.3s
+  [cpo on extremity_1.3 seed=42] cost=110687.0  viol=0.00%  fcsd=1.0000  time=288.0s
+  [cpo on extremity_1.4 seed=123] cost=120250.5  viol=0.00%  fcsd=0.9999  time=296.1s
+  [cpo on extremity_1.5 seed=456] cost=110281.7  viol=5.06%  fcsd=0.9836  time=316.2s
+  [safety_layer on extremity_0.8 seed=2024] cost=50662.2  viol=60.27%  fcsd=0.8076  time=878.5s
+  [safety_layer on extremity_1.0 seed=456] cost=68893.8  viol=34.52%  fcsd=0.8902  time=907.3s
+  [safety_layer on extremity_1.2 seed=42] cost=53217.4  viol=74.40%  fcsd=0.7624  time=906.9s
+  [safety_layer on extremity_1.3 seed=123] cost=68442.9  viol=56.55%  fcsd=0.8205  time=900.6s
+  [safety_layer on extremity_1.4 seed=456] cost=84758.6  viol=45.09%  fcsd=0.8556  time=904.4s
+  [safety_layer on extremity_1.5 seed=789] cost=75402.5  viol=68.45%  fcsd=0.7705  time=891.8s
+  [fuzzy_sac on extremity_0.8 seed=789] cost=82657.7  viol=0.15%  fcsd=0.9946  time=1141.6s
+  [fuzzy_sac on extremity_1.0 seed=789] cost=87846.6  viol=0.00%  fcsd=0.9925  time=1131.4s
+  [fuzzy_sac on extremity_1.1 seed=789] cost=89331.3  viol=0.30%  fcsd=0.9924  time=1128.3s
+  [fuzzy_sac on extremity_1.2 seed=2024] cost=99366.8  viol=1.93%  fcsd=0.9924  time=1164.4s
+  [fuzzy_sac on extremity_1.4 seed=42] cost=95345.1  viol=2.08%  fcsd=0.9850  time=1144.7s
+  [fuzzy_sac on extremity_1.5 seed=123] cost=94981.3  viol=5.21%  fcsd=0.9767  time=1150.2s
+  [hfg_sac on extremity_0.8 seed=2024] cost=82870.7  viol=0.45%  fcsd=0.9927  time=1704.3s
+  [hfg_sac on extremity_1.0 seed=2024] cost=85259.7  viol=0.45%  fcsd=0.9922  time=1702.1s
+  [hfg_sac on extremity_1.2 seed=42] cost=89790.7  viol=0.45%  fcsd=0.9905  time=1705.1s
+  [hfg_sac on extremity_1.3 seed=456] cost=92282.5  viol=0.89%  fcsd=0.9918  time=1700.9s
+  [hfg_sac on extremity_1.4 seed=123] cost=100223.3  viol=1.34%  fcsd=0.9909  time=2082.1s
+  [hfg_sac on extremity_1.5 seed=789] cost=99916.5  viol=3.42%  fcsd=0.9795  time=1378.7s
+  [sac on extremity_0.8 seed=789] cost=79961.8  viol=98.81%  fcsd=0.7824  time=1897.3s
+  [sac on extremity_1.0 seed=2024] cost=77947.0  viol=98.51%  fcsd=0.7894  time=1862.3s
+  [sac on extremity_1.2 seed=42] cost=113904.9  viol=99.26%  fcsd=0.7268  time=1168.5s
+  [sac on extremity_1.3 seed=123] cost=92782.1  viol=98.21%  fcsd=0.7912  time=2606.2s
+  [sac on extremity_1.4 seed=789] cost=115227.4  viol=99.40%  fcsd=0.7261  time=865.8s
+  [sac on extremity_1.5 seed=2024] cost=122157.9  viol=99.40%  fcsd=0.6634  time=855.3s
+  [ppo_lagrangian on extremity_1.0 seed=456] cost=116714.5  viol=23.81%  fcsd=0.9503  time=282.2s
+  [ppo_lagrangian on extremity_1.1 seed=456] cost=115578.2  viol=39.58%  fcsd=0.9170  time=296.9s
+  [ppo_lagrangian on extremity_1.2 seed=789] cost=88737.6  viol=60.42%  fcsd=0.8728  time=304.8s
+  [ppo_lagrangian on extremity_1.3 seed=789] cost=73723.5  viol=98.81%  fcsd=0.7912  time=285.3s
+  [ppo_lagrangian on extremity_1.5 seed=42] cost=119767.2  viol=42.86%  fcsd=0.9106  time=286.7s
+  [cpo on extremity_0.8 seed=123] cost=88321.3  viol=0.00%  fcsd=1.0000  time=290.5s
+  [cpo on extremity_1.0 seed=456] cost=70153.0  viol=44.94%  fcsd=0.8734  time=299.3s
+  [cpo on extremity_1.1 seed=789] cost=108463.7  viol=0.00%  fcsd=1.0000  time=288.0s
+  [cpo on extremity_1.2 seed=2024] cost=109364.5  viol=0.00%  fcsd=0.9996  time=286.5s
+  [cpo on extremity_1.4 seed=42] cost=111985.1  viol=0.45%  fcsd=0.9980  time=294.9s
+  [cpo on extremity_1.5 seed=123] cost=122161.8  viol=16.52%  fcsd=0.9657  time=317.9s
+  [safety_layer on extremity_0.8 seed=456] cost=68859.3  viol=35.86%  fcsd=0.8875  time=913.0s
+  [safety_layer on extremity_1.1 seed=42] cost=54495.8  viol=68.30%  fcsd=0.7854  time=903.3s
+  [safety_layer on extremity_1.2 seed=123] cost=63245.9  viol=57.59%  fcsd=0.8097  time=892.2s
+  [safety_layer on extremity_1.3 seed=456] cost=67099.0  viol=54.02%  fcsd=0.8272  time=902.2s
+  [safety_layer on extremity_1.4 seed=789] cost=86961.1  viol=35.42%  fcsd=0.8873  time=911.1s
+  [safety_layer on extremity_1.5 seed=2024] cost=68073.9  viol=71.13%  fcsd=0.7747  time=898.7s
+  [fuzzy_sac on extremity_1.0 seed=42] cost=85926.7  viol=0.30%  fcsd=0.9914  time=1144.0s
+  [fuzzy_sac on extremity_1.1 seed=123] cost=84940.1  viol=1.34%  fcsd=0.9879  time=1135.8s
+  [fuzzy_sac on extremity_1.2 seed=123] cost=89436.4  viol=0.45%  fcsd=0.9926  time=1130.6s
+  [fuzzy_sac on extremity_1.3 seed=456] cost=92367.1  viol=1.49%  fcsd=0.9872  time=1159.3s
+  [fuzzy_sac on extremity_1.4 seed=789] cost=93143.7  viol=3.27%  fcsd=0.9824  time=1123.9s
+  [fuzzy_sac on extremity_1.5 seed=789] cost=100885.6  viol=2.83%  fcsd=0.9825  time=1137.6s
+  [hfg_sac on extremity_0.8 seed=456] cost=83760.4  viol=0.45%  fcsd=0.9940  time=1710.2s
+  [hfg_sac on extremity_1.0 seed=789] cost=90302.0  viol=0.30%  fcsd=0.9943  time=1694.8s
+  [hfg_sac on extremity_1.1 seed=2024] cost=88504.5  viol=0.60%  fcsd=0.9906  time=1708.5s
+  [hfg_sac on extremity_1.3 seed=123] cost=97033.7  viol=0.74%  fcsd=0.9921  time=1708.9s
+  [hfg_sac on extremity_1.4 seed=789] cost=93401.0  viol=2.98%  fcsd=0.9834  time=2073.0s
+  [hfg_sac on extremity_1.5 seed=456] cost=101427.1  viol=1.79%  fcsd=0.9935  time=1387.7s
+  [sac on extremity_0.8 seed=123] cost=75491.3  viol=98.81%  fcsd=0.7911  time=1898.5s
+  [sac on extremity_1.1 seed=123] cost=118058.1  viol=99.40%  fcsd=0.7739  time=1868.1s
+  [sac on extremity_1.2 seed=123] cost=115978.1  viol=99.40%  fcsd=0.7611  time=1163.9s
+  [sac on extremity_1.3 seed=456] cost=91931.8  viol=98.96%  fcsd=0.7897  time=2602.7s
+  [sac on extremity_1.4 seed=456] cost=88367.4  viol=98.96%  fcsd=0.7898  time=861.5s
+  [sac on extremity_1.5 seed=123] cost=93282.0  viol=98.81%  fcsd=0.7903  time=853.9s
+  [ppo_lagrangian on extremity_1.0 seed=42] cost=95965.5  viol=0.00%  fcsd=1.0000  time=286.0s
+  [ppo_lagrangian on extremity_1.1 seed=123] cost=83278.4  viol=41.67%  fcsd=0.8695  time=297.6s
+  [ppo_lagrangian on extremity_1.2 seed=456] cost=115406.0  viol=36.31%  fcsd=0.9232  time=307.6s
+  [ppo_lagrangian on extremity_1.3 seed=2024] cost=82638.1  viol=98.21%  fcsd=0.7933  time=281.0s
+  [ppo_lagrangian on extremity_1.4 seed=2024] cost=107203.8  viol=12.05%  fcsd=0.9610  time=286.4s
+  [ppo_lagrangian on extremity_1.5 seed=2024] cost=89450.7  viol=98.81%  fcsd=0.7918  time=285.9s
+  [cpo on extremity_1.0 seed=42] cost=103193.5  viol=0.00%  fcsd=0.9998  time=300.8s
+  [cpo on extremity_1.1 seed=123] cost=94605.3  viol=23.51%  fcsd=0.9504  time=288.3s
+  [cpo on extremity_1.2 seed=456] cost=85151.7  viol=11.61%  fcsd=0.9601  time=292.0s
+  [cpo on extremity_1.3 seed=2024] cost=110695.6  viol=0.15%  fcsd=0.9990  time=293.7s
+  [cpo on extremity_1.5 seed=42] cost=115420.1  viol=0.89%  fcsd=0.9972  time=313.0s
+  [safety_layer on extremity_0.8 seed=123] cost=70016.9  viol=47.92%  fcsd=0.8450  time=891.4s
+  [safety_layer on extremity_1.0 seed=123] cost=47738.2  viol=65.92%  fcsd=0.7906  time=893.8s
+  [safety_layer on extremity_1.1 seed=456] cost=78094.9  viol=34.97%  fcsd=0.8887  time=904.5s
+  [safety_layer on extremity_1.3 seed=42] cost=80904.9  viol=48.81%  fcsd=0.8359  time=902.4s
+  [safety_layer on extremity_1.4 seed=123] cost=63164.1  viol=69.64%  fcsd=0.7713  time=903.6s
+  [safety_layer on extremity_1.5 seed=123] cost=53333.8  viol=91.52%  fcsd=0.6733  time=889.4s
+  [fuzzy_sac on extremity_0.8 seed=123] cost=84571.7  viol=0.30%  fcsd=0.9919  time=1153.7s
+  [fuzzy_sac on extremity_1.0 seed=456] cost=85636.3  viol=0.74%  fcsd=0.9945  time=1137.3s
+  [fuzzy_sac on extremity_1.1 seed=2024] cost=85581.5  viol=2.53%  fcsd=0.9862  time=1136.8s
+  [fuzzy_sac on extremity_1.3 seed=42] cost=93568.8  viol=1.19%  fcsd=0.9884  time=1158.7s
+  [fuzzy_sac on extremity_1.4 seed=123] cost=92393.9  viol=1.34%  fcsd=0.9895  time=1139.1s
+  [fuzzy_sac on extremity_1.5 seed=456] cost=96101.1  viol=4.46%  fcsd=0.9784  time=1148.7s
+  [hfg_sac on extremity_0.8 seed=789] cost=90639.8  viol=0.45%  fcsd=0.9953  time=1708.1s
+  [hfg_sac on extremity_1.1 seed=42] cost=88965.4  viol=0.15%  fcsd=0.9915  time=1704.8s
+  [hfg_sac on extremity_1.2 seed=123] cost=93020.0  viol=0.60%  fcsd=0.9943  time=1692.6s
+  [hfg_sac on extremity_1.3 seed=42] cost=89823.8  viol=1.19%  fcsd=0.9879  time=1709.9s
+  [hfg_sac on extremity_1.4 seed=456] cost=98765.2  viol=0.74%  fcsd=0.9905  time=2088.9s
+  [hfg_sac on extremity_1.5 seed=2024] cost=106738.8  viol=5.21%  fcsd=0.9755  time=1380.4s
+
+============================================================
+Done. ok=210  failed=0  total=210
+Wall time: 9.78 hours
+Log: E:\研究\saferl\outputs\experiments\run_all_parallel.log
+============================================================

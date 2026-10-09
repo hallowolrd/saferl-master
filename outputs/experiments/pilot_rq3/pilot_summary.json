@@ -1,0 +1,43 @@
+{
+  "rows": [
+    {
+      "arm": "from_scratch",
+      "cost_per_day": 13955.8,
+      "violation_pct": 37.65,
+      "min_fcsd": 0.674,
+      "convergence_ep": 10,
+      "train_time_s": 200.6
+    },
+    {
+      "arm": "naive_transfer",
+      "cost_per_day": 14571.48,
+      "violation_pct": 23.36,
+      "min_fcsd": 0.422,
+      "convergence_ep": 39,
+      "train_time_s": 844.0
+    },
+    {
+      "arm": "conservative_transfer",
+      "cost_per_day": 13956.32,
+      "violation_pct": 26.49,
+      "min_fcsd": 0.418,
+      "convergence_ep": 10,
+      "train_time_s": 628.2,
+      "m1_similarities": {
+        "soc_upper": 1.0,
+        "soc_lower": 1.0,
+        "freq_dev": 1.0
+      },
+      "m1_categories": {
+        "soc_upper": "transferable",
+        "soc_lower": "transferable",
+        "freq_dev": "transferable"
+      }
+    }
+  ],
+  "config": {
+    "task": "T3_island_normal_extreme",
+    "seed": 42,
+    "n_episodes": 60
+  }
+}

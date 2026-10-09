@@ -1,0 +1,62 @@
+
+======================================================================
+SMOKE: RQ4 ablation variants: ['hfg_sac_full', 'hfg_sac_no_fuzzycon', 'hfg_sac_no_fuzzyknow', 'hfg_sac_baseline']
+======================================================================
+  [hfg_sac_full on S4_smoke seed=42] cost=97095.8  viol=4.17%  fcsd=0.9766  time=11.8s
+[RQ4:hfg_sac_full] OK in 23.2s
+  [hfg_sac_no_fuzzycon on S4_smoke seed=42] cost=97095.8  viol=4.17%  fcsd=0.9766  time=12.2s
+[RQ4:hfg_sac_no_fuzzycon] OK in 15.9s
+[RQ4:hfg_sac_no_fuzzyknow] FAIL in 0.0s: FrozenInstanceError: cannot assign to field 'reward_shaping_weight_init'
+Traceback (most recent call last):
+  File "E:\研究\saferl\scripts\smoke_rq2_rq5.py", line 44, in safe
+    result = fn()
+  File "E:\研究\saferl\scripts\smoke_rq2_rq5.py", line 79, in _fn
+    return train_agent(
+        v, "S4_smoke", cfg, SMOKE_SEED,
+        n_episodes=SMOKE_EPISODES, device="cpu", output_dir=OUT,
+    )
+  File "E:\研究\saferl\run\experiment_runner.py", line 304, in train_agent
+    agent.fuzzy_reward_shaper.cfg.reward_shaping_weight_init = 0.0
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 34, in __setattr__
+dataclasses.FrozenInstanceError: cannot assign to field 'reward_shaping_weight_init'
+
+  [hfg_sac_baseline on S4_smoke seed=42] cost=2515.6  viol=100.00%  fcsd=0.4979  time=20.0s
+[RQ4:hfg_sac_baseline] OK in 28.5s
+
+======================================================================
+SMOKE: RQ2 extremity sweep (levels 0.8 / 1.5, hfg_sac)
+======================================================================
+  [hfg_sac on extremity_0.8_smoke seed=42] cost=98828.6  viol=67.26%  fcsd=0.7716  time=70.4s
+[RQ2:level=0.8] OK in 87.0s
+  [hfg_sac on extremity_1.5_smoke seed=42] cost=107049.0  viol=88.10%  fcsd=0.6522  time=40.2s
+[RQ2:level=1.5] OK in 54.6s
+
+======================================================================
+SMOKE: RQ3 transfer T3 (island normal -> island extreme), conservative=True
+======================================================================
+    Transferred weights (obs=9, act=4)
+[RQ3:T3_conservative] OK in 82.7s
+
+======================================================================
+SMOKE: RQ5 sensitivity (one value per axis)
+======================================================================
+[RQ5:beta_width=0.05] OK in 62.3s
+[RQ5:alpha=0.85] OK in 29.6s
+[RQ5:kappa=0.3] OK in 34.6s
+
+======================================================================
+SMOKE SUMMARY
+======================================================================
+  [OK  ] RQ4_ablation       hfg_sac_full                   cost=97096 viol=4.2% fcsd=0.977
+  [OK  ] RQ4_ablation       hfg_sac_no_fuzzycon            cost=97096 viol=4.2% fcsd=0.977
+  [FAIL] RQ4_ablation       hfg_sac_no_fuzzyknow            -> FrozenInstanceError: cannot assign to field 'reward_shaping_weight_init'
+  [OK  ] RQ4_ablation       hfg_sac_baseline               cost=2516 viol=100.0% fcsd=0.498
+  [OK  ] RQ2_extremity      level_0.8                      cost=98829 viol=67.3% fcsd=0.772
+  [OK  ] RQ2_extremity      level_1.5                      cost=107049 viol=88.1% fcsd=0.652
+  [OK  ] RQ3_transfer       T3_conservative                cost=107254 viol=37.1% fcsd=0.875
+  [OK  ] RQ5_sensitivity    beta_width=0.05                cost=306919 viol=0.0% fcsd=0.831
+  [OK  ] RQ5_sensitivity    alpha=0.85                     cost=306918 viol=0.0% fcsd=0.831
+  [OK  ] RQ5_sensitivity    kappa=0.3                      cost=306918 viol=0.0% fcsd=0.831
+
+Full report: E:\研究\saferl\outputs\smoke_rq2_rq5\smoke_report.json

@@ -1,0 +1,123 @@
+{
+  "RQ2_extremity": {
+    "sac": {
+      "tag": "RQ2:sac",
+      "ok": true,
+      "elapsed_s": 7.917536020278931,
+      "result": "RunResult(algorithm='sac', scenario='extremity_1.0_smoke', seed=42, total_cost=2514.768320247531, cost_per_day=359.2526171782187, violation_rate=100.0, avg_fcsd=0.3523891755127294, min_fcsd=0.21052657839384792, max_violation=0.0, convergence_episode=0, final_reward=-909151.9280252887, training_time_s=5.023214817047119, episode_rewards=[-1091964.5157074607, -1081375.9696931196, -1004947.3134509014], episode_costs=[54601.90881436232, 32219.5246766737, 1958.4042399053578], episode_violation_rates=[97.76785714285714, 98.36309523809523, 100.0], episode_fcsds=[0.4777779183038919, 0.4187644849612157, 0.3486498711313462], eval_costs=[2514.768320247531], eval_violations=[100.0], eval_fcsds=[0.35238917551272947])",
+      "metrics": {
+        "algorithm": "sac",
+        "scenario": "extremity_1.0_smoke",
+        "total_cost": 2514.768320247531,
+        "violation_rate": 100.0,
+        "avg_fcsd": 0.3523891755127294
+      }
+    },
+    "ppo_lagrangian": {
+      "tag": "RQ2:ppo_lagrangian",
+      "ok": true,
+      "elapsed_s": 3.0080182552337646,
+      "result": "RunResult(algorithm='ppo_lagrangian', scenario='extremity_1.0_smoke', seed=42, total_cost=310.7683708775585, cost_per_day=44.395481553936925, violation_rate=100.0, avg_fcsd=0.2681619434311354, min_fcsd=0.21052632795680878, max_violation=0.0, convergence_episode=0, final_reward=-1305610.738122785, training_time_s=2.0035459995269775, episode_rewards=[-1186913.1026972465, -1212020.1715483395, -1194942.0530400465], episode_costs=[23029.325793013268, 20454.99352722487, 21374.748120438744], episode_violation_rates=[98.95833333333334, 98.66071428571429, 98.21428571428571], episode_fcsds=[0.43002350916263704, 0.45379517918416407, 0.44983121325297243], eval_costs=[310.7683708775585], eval_violations=[100.0], eval_fcsds=[0.26816194343113536])",
+      "metrics": {
+        "algorithm": "ppo_lagrangian",
+        "scenario": "extremity_1.0_smoke",
+        "total_cost": 310.7683708775585,
+        "violation_rate": 100.0,
+        "avg_fcsd": 0.2681619434311354
+      }
+    },
+    "cpo": {
+      "tag": "RQ2:cpo",
+      "ok": true,
+      "elapsed_s": 3.7537786960601807,
+      "result": "RunResult(algorithm='cpo', scenario='extremity_1.0_smoke', seed=42, total_cost=155.38708987542122, cost_per_day=22.198155696488747, violation_rate=100.0, avg_fcsd=0.4450601023433315, min_fcsd=0.4210526315850229, max_violation=0.0, convergence_episode=0, final_reward=-1255490.9872826322, training_time_s=2.429137945175171, episode_rewards=[-1186913.1026972465, -1212020.1715483395, -1184756.9554363727], episode_costs=[23029.325793013268, 20454.99352722487, 21227.65154540757], episode_violation_rates=[98.95833333333334, 98.66071428571429, 97.91666666666666], episode_fcsds=[0.43002350916263704, 0.45379517918416407, 0.47567985914922334], eval_costs=[155.38708987542122], eval_violations=[100.0], eval_fcsds=[0.4450601023433314])",
+      "metrics": {
+        "algorithm": "cpo",
+        "scenario": "extremity_1.0_smoke",
+        "total_cost": 155.38708987542122,
+        "violation_rate": 100.0,
+        "avg_fcsd": 0.4450601023433315
+      }
+    },
+    "fuzzy_sac": {
+      "tag": "RQ2:fuzzy_sac",
+      "ok": true,
+      "elapsed_s": 37.152602672576904,
+      "result": "RunResult(algorithm='fuzzy_sac', scenario='extremity_1.0_smoke', seed=42, total_cost=102305.05470167336, cost_per_day=14615.007814524766, violation_rate=75.59523809523809, avg_fcsd=0.7355282007180477, min_fcsd=0.4192972015725628, max_violation=0.0, convergence_episode=0, final_reward=-585351.9322320167, training_time_s=25.949885606765747, episode_rewards=[-1091964.5157074607, -850769.7041100761, -585414.2388876782], episode_costs=[54601.90881436232, 79260.69517479971, 102455.27302987015], episode_violation_rates=[97.76785714285714, 86.45833333333334, 74.70238095238095], episode_fcsds=[0.4777779183038919, 0.6058991669699717, 0.7372314778248868], eval_costs=[102305.05470167336], eval_violations=[75.59523809523809], eval_fcsds=[0.7355282007180477])",
+      "metrics": {
+        "algorithm": "fuzzy_sac",
+        "scenario": "extremity_1.0_smoke",
+        "total_cost": 102305.05470167336,
+        "violation_rate": 75.59523809523809,
+        "avg_fcsd": 0.7355282007180477
+      }
+    },
+    "hfg_sac": {
+      "tag": "RQ2:hfg_sac",
+      "ok": true,
+      "elapsed_s": 23.297450304031372,
+      "result": "RunResult(algorithm='hfg_sac', scenario='extremity_1.0_smoke', seed=42, total_cost=102329.33174896687, cost_per_day=14618.475964138124, violation_rate=75.29761904761905, avg_fcsd=0.7358141526202953, min_fcsd=0.41929720231466283, max_violation=0.0, convergence_episode=0, final_reward=-585275.0493819356, training_time_s=17.8695867061615, episode_rewards=[-1091964.5157074607, -839897.7630355036, -584816.9032167518], episode_costs=[54601.90881436232, 80048.62771071764, 102421.21314823086], episode_violation_rates=[97.76785714285714, 86.45833333333334, 75.0], episode_fcsds=[0.4777779183038919, 0.6105807636738929, 0.7375833696837327], eval_costs=[102329.33174896688], eval_violations=[75.29761904761905], eval_fcsds=[0.7358141526202953])",
+      "metrics": {
+        "algorithm": "hfg_sac",
+        "scenario": "extremity_1.0_smoke",
+        "total_cost": 102329.33174896687,
+        "violation_rate": 75.29761904761905,
+        "avg_fcsd": 0.7358141526202953
+      }
+    }
+  },
+  "RQ3_transfer": {
+    "from_scratch_hfg": {
+      "tag": "RQ3:from_scratch_hfg",
+      "ok": true,
+      "elapsed_s": 17.870373487472534,
+      "result": "RunResult(algorithm='hfg_sac', scenario='T3_smoke_scratch', seed=42, total_cost=80716.8457558271, cost_per_day=11530.977965118158, violation_rate=44.64285714285715, avg_fcsd=0.8504493471262722, min_fcsd=0.6736767862527064, max_violation=0.0, convergence_episode=0, final_reward=-353470.12561584765, training_time_s=14.247157573699951, episode_rewards=[-804709.8688595839, -572407.5674292542, -339973.5350415993], episode_costs=[54601.90881436232, 70475.53641304804, 82478.5819339109], episode_violation_rates=[89.73214285714286, 65.02976190476191, 42.55952380952381], episode_fcsds=[0.5851828394718573, 0.7247827842620203, 0.857621517784896], eval_costs=[80716.84575582709], eval_violations=[44.642857142857146], eval_fcsds=[0.8504493471262722])",
+      "metrics": {
+        "algorithm": "hfg_sac",
+        "scenario": "T3_smoke_scratch",
+        "total_cost": 80716.8457558271,
+        "violation_rate": 44.64285714285715,
+        "avg_fcsd": 0.8504493471262722
+      }
+    },
+    "anchor_ppo_lagrangian": {
+      "tag": "RQ3:anchor_ppo_lagrangian",
+      "ok": true,
+      "elapsed_s": 2.9430525302886963,
+      "result": "RunResult(algorithm='ppo_lagrangian', scenario='T3_smoke_anchor', seed=42, total_cost=288.40676774161693, cost_per_day=41.20096682023099, violation_rate=100.0, avg_fcsd=0.36746617775436985, min_fcsd=0.2105263378202104, max_violation=0.0, convergence_episode=0, final_reward=-1024153.2478953522, training_time_s=1.9344234466552734, episode_rewards=[-908806.8109187984, -941991.6471888167, -933376.8402752827], episode_costs=[23976.54070325996, 21181.41976678089, 22083.692077206688], episode_violation_rates=[93.00595238095238, 92.55952380952381, 93.00595238095238], episode_fcsds=[0.5327335084063025, 0.5478394479291089, 0.5357755827533008], eval_costs=[288.40676774161693], eval_violations=[100.0], eval_fcsds=[0.3674661777543699])",
+      "metrics": {
+        "algorithm": "ppo_lagrangian",
+        "scenario": "T3_smoke_anchor",
+        "total_cost": 288.40676774161693,
+        "violation_rate": 100.0,
+        "avg_fcsd": 0.36746617775436985
+      }
+    },
+    "naive_transfer": {
+      "tag": "RQ3:naive_transfer",
+      "ok": true,
+      "elapsed_s": 34.54285740852356,
+      "result": "RunResult(algorithm='hfg_sac_transfer', scenario='transfer_target', seed=42, total_cost=94609.0819396945, cost_per_day=13515.583134242072, violation_rate=32.44047619047619, avg_fcsd=0.8873574994644832, min_fcsd=0.4357028773142878, max_violation=0.0, convergence_episode=0, final_reward=-320722.18369980325, training_time_s=28.3090341091156, episode_rewards=[-466029.4255794189, -336340.1496265613, -342978.6903843749], episode_costs=[84781.7189084884, 101664.99815024901, 100069.71477643703], episode_violation_rates=[52.67857142857143, 39.88095238095239, 37.351190476190474], episode_fcsds=[0.7845825777995569, 0.8654799021112949, 0.8699494707594715], eval_costs=[], eval_violations=[], eval_fcsds=[])",
+      "metrics": {
+        "algorithm": "hfg_sac_transfer",
+        "scenario": "transfer_target",
+        "total_cost": 94609.0819396945,
+        "violation_rate": 32.44047619047619,
+        "avg_fcsd": 0.8873574994644832
+      }
+    },
+    "hfg_transfer": {
+      "tag": "RQ3:hfg_transfer",
+      "ok": true,
+      "elapsed_s": 78.50451159477234,
+      "result": "RunResult(algorithm='hfg_sac_transfer', scenario='transfer_target', seed=42, total_cost=107253.88801377267, cost_per_day=15321.984001967523, violation_rate=37.05357142857143, avg_fcsd=0.8751952473344499, min_fcsd=0.6736767895131933, max_violation=0.0, convergence_episode=0, final_reward=-324126.7540267782, training_time_s=64.62075972557068, episode_rewards=[-725323.4812513199, -671315.1987653291, -594042.19073642], episode_costs=[36975.21647543409, 46159.788030043936, 56013.76635543624], episode_violation_rates=[95.08928571428571, 95.53571428571429, 77.97619047619048], episode_fcsds=[0.613251455011856, 0.6471636292205136, 0.7116498265744223], eval_costs=[], eval_violations=[], eval_fcsds=[])",
+      "metrics": {
+        "algorithm": "hfg_sac_transfer",
+        "scenario": "transfer_target",
+        "total_cost": 107253.88801377267,
+        "violation_rate": 37.05357142857143,
+        "avg_fcsd": 0.8751952473344499
+      }
+    }
+  }
+}

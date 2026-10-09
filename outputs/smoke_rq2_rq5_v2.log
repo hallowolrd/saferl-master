@@ -1,0 +1,49 @@
+
+======================================================================
+SMOKE: RQ4 ablation variants: ['hfg_sac_full', 'hfg_sac_no_fuzzycon', 'hfg_sac_no_fuzzyknow', 'hfg_sac_baseline']
+======================================================================
+  [hfg_sac_full on S4_smoke seed=42] cost=97095.8  viol=4.17%  fcsd=0.9766  time=7.0s
+[RQ4:hfg_sac_full] OK in 10.8s
+  [hfg_sac_no_fuzzycon on S4_smoke seed=42] cost=95126.9  viol=5.65%  fcsd=0.9728  time=5.2s
+[RQ4:hfg_sac_no_fuzzycon] OK in 8.5s
+  [hfg_sac_no_fuzzyknow on S4_smoke seed=42] cost=97235.3  viol=4.17%  fcsd=0.9765  time=8.6s
+[RQ4:hfg_sac_no_fuzzyknow] OK in 11.9s
+  [hfg_sac_baseline on S4_smoke seed=42] cost=2515.6  viol=100.00%  fcsd=0.4979  time=4.4s
+[RQ4:hfg_sac_baseline] OK in 6.2s
+
+======================================================================
+SMOKE: RQ2 extremity sweep (levels 0.8 / 1.5, hfg_sac)
+======================================================================
+  [hfg_sac on extremity_0.8_smoke seed=42] cost=98828.6  viol=67.26%  fcsd=0.7716  time=8.7s
+[RQ2:level=0.8] OK in 12.1s
+  [hfg_sac on extremity_1.5_smoke seed=42] cost=107049.0  viol=88.10%  fcsd=0.6522  time=8.7s
+[RQ2:level=1.5] OK in 12.2s
+
+======================================================================
+SMOKE: RQ3 transfer T3 (island normal -> island extreme), conservative=True
+======================================================================
+    Transferred weights (obs=9, act=4)
+[RQ3:T3_conservative] OK in 29.6s
+
+======================================================================
+SMOKE: RQ5 sensitivity (one value per axis)
+======================================================================
+[RQ5:beta_width=0.05] OK in 20.6s
+[RQ5:alpha=0.85] OK in 22.0s
+[RQ5:kappa=0.3] OK in 28.5s
+
+======================================================================
+SMOKE SUMMARY
+======================================================================
+  [OK  ] RQ4_ablation       hfg_sac_full                   cost=97096 viol=4.2% fcsd=0.977
+  [OK  ] RQ4_ablation       hfg_sac_no_fuzzycon            cost=95127 viol=5.7% fcsd=0.973
+  [OK  ] RQ4_ablation       hfg_sac_no_fuzzyknow           cost=97235 viol=4.2% fcsd=0.976
+  [OK  ] RQ4_ablation       hfg_sac_baseline               cost=2516 viol=100.0% fcsd=0.498
+  [OK  ] RQ2_extremity      level_0.8                      cost=98829 viol=67.3% fcsd=0.772
+  [OK  ] RQ2_extremity      level_1.5                      cost=107049 viol=88.1% fcsd=0.652
+  [OK  ] RQ3_transfer       T3_conservative                cost=107254 viol=37.1% fcsd=0.875
+  [OK  ] RQ5_sensitivity    beta_width=0.05                cost=306919 viol=0.0% fcsd=0.831
+  [OK  ] RQ5_sensitivity    alpha=0.85                     cost=306918 viol=0.0% fcsd=0.831
+  [OK  ] RQ5_sensitivity    kappa=0.3                      cost=306918 viol=0.0% fcsd=0.831
+
+Full report: E:\ÑÐ¾¿\saferl\outputs\smoke_rq2_rq5\smoke_report.json

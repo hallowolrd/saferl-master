@@ -1,0 +1,39 @@
+
+======================================================================
+SMOKE: RQ2 extremity level=1.0 (all 5 algorithms)
+======================================================================
+  [sac on extremity_1.0_smoke seed=42] cost=2514.8  viol=100.00%  fcsd=0.3524  time=5.0s
+[RQ2:sac] OK in 7.9s
+  [ppo_lagrangian on extremity_1.0_smoke seed=42] cost=310.8  viol=100.00%  fcsd=0.2682  time=2.0s
+[RQ2:ppo_lagrangian] OK in 3.0s
+  [cpo on extremity_1.0_smoke seed=42] cost=155.4  viol=100.00%  fcsd=0.4451  time=2.4s
+[RQ2:cpo] OK in 3.8s
+  [fuzzy_sac on extremity_1.0_smoke seed=42] cost=102305.1  viol=75.60%  fcsd=0.7355  time=25.9s
+[RQ2:fuzzy_sac] OK in 37.2s
+  [hfg_sac on extremity_1.0_smoke seed=42] cost=102329.3  viol=75.30%  fcsd=0.7358  time=17.9s
+[RQ2:hfg_sac] OK in 23.3s
+
+======================================================================
+SMOKE: RQ3 transfer T3 (4 methods)
+======================================================================
+  [hfg_sac on T3_smoke_scratch seed=42] cost=80716.8  viol=44.64%  fcsd=0.8504  time=14.2s
+[RQ3:from_scratch_hfg] OK in 17.9s
+  [ppo_lagrangian on T3_smoke_anchor seed=42] cost=288.4  viol=100.00%  fcsd=0.3675  time=1.9s
+[RQ3:anchor_ppo_lagrangian] OK in 2.9s
+    Transferred weights (obs=9, act=4)
+[RQ3:naive_transfer] OK in 34.5s
+    Transferred weights (obs=9, act=4)
+[RQ3:hfg_transfer] OK in 78.5s
+
+======================================================================
+SMOKE SUMMARY
+======================================================================
+  [OK  ] RQ2_extremity      sac                            cost=2515 viol=100.0% fcsd=0.352
+  [OK  ] RQ2_extremity      ppo_lagrangian                 cost=311 viol=100.0% fcsd=0.268
+  [OK  ] RQ2_extremity      cpo                            cost=155 viol=100.0% fcsd=0.445
+  [OK  ] RQ2_extremity      fuzzy_sac                      cost=102305 viol=75.6% fcsd=0.736
+  [OK  ] RQ2_extremity      hfg_sac                        cost=102329 viol=75.3% fcsd=0.736
+  [OK  ] RQ3_transfer       from_scratch_hfg               cost=80717 viol=44.6% fcsd=0.850
+  [OK  ] RQ3_transfer       anchor_ppo_lagrangian          cost=288 viol=100.0% fcsd=0.367
+  [OK  ] RQ3_transfer       naive_transfer                 cost=94609 viol=32.4% fcsd=0.887
+  [OK  ] RQ3_transfer       hfg_transfer                   cost=107254 viol=37.1% fcsd=0.875

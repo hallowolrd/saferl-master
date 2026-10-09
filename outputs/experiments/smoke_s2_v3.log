@@ -1,0 +1,4 @@
+  [hfg_sac on S2_grid_extreme seed=123] cost=164077.6  viol=0.00%  fcsd=0.9211  time=161.6s
+elapsed 167s
+final: cost/day=23440 viol=0.0% fcsd=0.921
+episode violation rates (first 15): [17.1, 5.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]

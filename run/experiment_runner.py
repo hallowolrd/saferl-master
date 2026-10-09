@@ -1019,7 +1019,8 @@ def run_transfer_experiments(
     # T3: Normal -> Extreme (islanded)
 
     transfer_tasks = {
-        "T1_summer_winter": {
+        # T1: grid normal -> grid extreme, same battery band [0.3, 0.8]
+        "T1_grid_same": {
             "source": {
                 "env_mode": "grid_connected",
                 "scenario_name": "typical_week_summer",
@@ -1027,32 +1028,67 @@ def run_transfer_experiments(
             },
             "target": {
                 "env_mode": "grid_connected",
-                "scenario_name": "typical_week_winter",
-                "extreme_multiplier": None,
+                "scenario_name": "summer_extreme",
+                "extreme_multiplier": {"pv": 1.2, "load": 1.3, "wt": 0.6},
             },
         },
-        "T2_grid_island": {
+        # T2: grid normal -> grid extreme, target battery band narrowed to [0.4, 0.7]
+        "T2_grid_shifted": {
             "source": {
                 "env_mode": "grid_connected",
                 "scenario_name": "typical_week_summer",
                 "extreme_multiplier": None,
             },
             "target": {
-                "env_mode": "islanded",
-                "scenario_name": "typical_week_summer",
-                "extreme_multiplier": None,
+                "env_mode": "grid_connected",
+                "scenario_name": "summer_extreme",
+                "extreme_multiplier": {"pv": 1.2, "load": 1.3, "wt": 0.6},
+                "soc_optimal_min": 0.4,
+                "soc_optimal_max": 0.7,
             },
         },
-        "T3_normal_extreme": {
+        # T3: island normal -> island extreme, same battery band [0.3, 0.8]
+        "T3_island_same": {
             "source": {
                 "env_mode": "islanded",
                 "scenario_name": "typical_week_summer",
                 "extreme_multiplier": None,
+                "interruptible_load_kw": 600.0,
+                "freq_penalty_slope": 1500.0,
+                "freq_volt_shield_safety_ratio": 0.15,
+                "load_shed_cost": 1.0,
             },
             "target": {
                 "env_mode": "islanded",
                 "scenario_name": "summer_extreme",
                 "extreme_multiplier": {"pv": 0.5, "load": 1.25, "wt": 0.8},
+                "interruptible_load_kw": 600.0,
+                "freq_penalty_slope": 1500.0,
+                "freq_volt_shield_safety_ratio": 0.15,
+                "load_shed_cost": 1.0,
+            },
+        },
+        # T4: island normal -> island extreme, target battery band narrowed to [0.4, 0.7]
+        "T4_island_shifted": {
+            "source": {
+                "env_mode": "islanded",
+                "scenario_name": "typical_week_summer",
+                "extreme_multiplier": None,
+                "interruptible_load_kw": 600.0,
+                "freq_penalty_slope": 1500.0,
+                "freq_volt_shield_safety_ratio": 0.15,
+                "load_shed_cost": 1.0,
+            },
+            "target": {
+                "env_mode": "islanded",
+                "scenario_name": "summer_extreme",
+                "extreme_multiplier": {"pv": 0.5, "load": 1.25, "wt": 0.8},
+                "interruptible_load_kw": 600.0,
+                "freq_penalty_slope": 1500.0,
+                "freq_volt_shield_safety_ratio": 0.15,
+                "load_shed_cost": 1.0,
+                "soc_optimal_min": 0.4,
+                "soc_optimal_max": 0.7,
             },
         },
     }

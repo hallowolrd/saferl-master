@@ -1,0 +1,14 @@
+{
+  "MILP": {
+    "cost": 79120.60538042871,
+    "violation_rate": 0.0,
+    "avg_fcsd": 0.1436941964285714,
+    "max_violation": 0.5
+  },
+  "MPC": {
+    "cost": 77287.42193961533,
+    "violation_rate": 0.0,
+    "avg_fcsd": 0.10426084816037702,
+    "max_violation": 0.9687499999999999
+  }
+}

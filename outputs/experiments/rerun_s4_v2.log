@@ -1,0 +1,16 @@
+  [hfg_sac on S4_island_extreme seed=123] cost=161199.8  viol=0.15%  fcsd=0.9983  time=5428.6s
+[done] S4 seed=123: cost/day=23,029 viol=0.1% fcsd=0.998 (5525s)
+  [hfg_sac on S4_island_extreme seed=42] cost=178687.4  viol=0.15%  fcsd=0.9923  time=5445.2s
+[done] S4 seed=42: cost/day=25,527 viol=0.1% fcsd=0.992 (5539s)
+  [hfg_sac on S4_island_extreme seed=456] cost=164190.5  viol=1.64%  fcsd=0.9923  time=5451.4s
+[done] S4 seed=456: cost/day=23,456 viol=1.6% fcsd=0.992 (5547s)
+Retraining HFG-SAC on S4 with 3 parallel seeds
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+
+S4 retrain completed in 92.5 min
+
+Seed       Cost RMB/d     Viol %   Avg FCSD
+--------------------------------------------------
+42             25,527       0.15     0.9923
+123            23,029       0.15     0.9983
+456            23,456       1.64     0.9923

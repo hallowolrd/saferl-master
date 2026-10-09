@@ -1,0 +1,410 @@
+{
+  "S1_grid_normal": {
+    "MILP": {
+      "cost_mean": 59361.99989973944,
+      "cost_std": 0.0,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.1436941964285714,
+      "fcsd_std": 0.0
+    },
+    "MPC": {
+      "cost_mean": 59597.34504891336,
+      "cost_std": 0.0,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.10426084816037702,
+      "fcsd_std": 0.0
+    },
+    "sac": {
+      "cost_mean": 108610.40809907897,
+      "cost_std": 26205.552835455455,
+      "cost_per_day_mean": 15515.772585582708,
+      "cost_per_day_std": 3743.6504050650656,
+      "violation_rate_mean": 82.19246031746032,
+      "violation_rate_std": 29.297089552628332,
+      "fcsd_mean": 0.6749846074758064,
+      "fcsd_std": 0.11766020106227382,
+      "convergence_mean": 142.33333333333334,
+      "n_seeds": 3
+    },
+    "ppo": {
+      "cost_mean": 118874.05474442737,
+      "cost_std": 32551.404745043423,
+      "cost_per_day_mean": 16982.00782063248,
+      "cost_per_day_std": 4650.200677863347,
+      "violation_rate_mean": 1.7361111111111114,
+      "violation_rate_std": 3.007032652029301,
+      "fcsd_mean": 0.9523876078107353,
+      "fcsd_std": 0.01754579757508488,
+      "convergence_mean": 163.0,
+      "n_seeds": 3
+    },
+    "ppo_lagrangian": {
+      "cost_mean": 155435.0823448208,
+      "cost_std": 14305.4782580213,
+      "cost_per_day_mean": 22205.01176354583,
+      "cost_per_day_std": 2043.6397511459,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.9999828974524853,
+      "fcsd_std": 1.061920444325647e-05,
+      "convergence_mean": 173.66666666666666,
+      "n_seeds": 3
+    },
+    "cpo": {
+      "cost_mean": 120682.08894495375,
+      "cost_std": 12927.709816049333,
+      "cost_per_day_mean": 17240.29842070768,
+      "cost_per_day_std": 1846.8156880070485,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.9997584834345362,
+      "fcsd_std": 0.00017485696417356042,
+      "convergence_mean": 180.33333333333334,
+      "n_seeds": 3
+    },
+    "safety_layer": {
+      "cost_mean": 214043.71552278977,
+      "cost_std": 1901.0939909361325,
+      "cost_per_day_mean": 30577.673646112828,
+      "cost_per_day_std": 271.5848558480194,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.9558722279591315,
+      "fcsd_std": 0.02141471448116943,
+      "convergence_mean": 11.0,
+      "n_seeds": 3
+    },
+    "fuzzy_sac": {
+      "cost_mean": 105980.78290562588,
+      "cost_std": 14374.505716494614,
+      "cost_per_day_mean": 15140.111843660843,
+      "cost_per_day_std": 2053.5008166420876,
+      "violation_rate_mean": 52.67857142857142,
+      "violation_rate_std": 49.8483030435995,
+      "fcsd_mean": 0.7810378543933462,
+      "fcsd_std": 0.2044692686775845,
+      "convergence_mean": 103.66666666666667,
+      "n_seeds": 3
+    },
+    "hfg_sac": {
+      "cost_mean": 84964.34342124648,
+      "cost_std": 20080.40264114987,
+      "cost_per_day_mean": 12137.763345892354,
+      "cost_per_day_std": 2868.6289487356958,
+      "violation_rate_mean": 57.98611111111111,
+      "violation_rate_std": 51.49160748182153,
+      "fcsd_mean": 0.7731686238949725,
+      "fcsd_std": 0.1884377062755298,
+      "convergence_mean": 81.33333333333333,
+      "n_seeds": 3
+    }
+  },
+  "S2_grid_extreme": {
+    "MILP": {
+      "cost_mean": 79120.60538042871,
+      "cost_std": 0.0,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.1436941964285714,
+      "fcsd_std": 0.0
+    },
+    "MPC": {
+      "cost_mean": 77287.42193961533,
+      "cost_std": 0.0,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.10426084816037702,
+      "fcsd_std": 0.0
+    },
+    "sac": {
+      "cost_mean": 180734.7034951701,
+      "cost_std": 17638.829281278235,
+      "cost_per_day_mean": 25819.243356452873,
+      "cost_per_day_std": 2519.83275446832,
+      "violation_rate_mean": 99.25595238095237,
+      "violation_rate_std": 1.7404671430534633e-14,
+      "fcsd_mean": 0.5831763949069432,
+      "fcsd_std": 0.028942200008220217,
+      "convergence_mean": 156.0,
+      "n_seeds": 3
+    },
+    "ppo": {
+      "cost_mean": 116768.19470910763,
+      "cost_std": 11801.778151828768,
+      "cost_per_day_mean": 16681.17067272966,
+      "cost_per_day_std": 1685.968307404109,
+      "violation_rate_mean": 42.16269841269841,
+      "violation_rate_std": 18.223750005087357,
+      "fcsd_mean": 0.7917052586574836,
+      "fcsd_std": 0.06631800289411105,
+      "convergence_mean": 150.66666666666666,
+      "n_seeds": 3
+    },
+    "ppo_lagrangian": {
+      "cost_mean": 309175.954392234,
+      "cost_std": 39767.32825509414,
+      "cost_per_day_mean": 44167.99348460486,
+      "cost_per_day_std": 5681.046893584878,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.9999925035362137,
+      "fcsd_std": 3.134872994080474e-06,
+      "convergence_mean": 85.66666666666667,
+      "n_seeds": 3
+    },
+    "cpo": {
+      "cost_mean": 221726.53083354988,
+      "cost_std": 20215.940070881163,
+      "cost_per_day_mean": 31675.21869050713,
+      "cost_per_day_std": 2887.9914386973114,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.9994026528871259,
+      "fcsd_std": 0.0004482062977291185,
+      "convergence_mean": 154.66666666666666,
+      "n_seeds": 3
+    },
+    "safety_layer": {
+      "cost_mean": 283822.2479476359,
+      "cost_std": 72475.54976838682,
+      "cost_per_day_mean": 40546.03542109084,
+      "cost_per_day_std": 10353.649966912404,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.958700416619274,
+      "fcsd_std": 0.029951934556853067,
+      "convergence_mean": 36.666666666666664,
+      "n_seeds": 3
+    },
+    "fuzzy_sac": {
+      "cost_mean": 196227.00826341278,
+      "cost_std": 13151.172235605236,
+      "cost_per_day_mean": 28032.429751916115,
+      "cost_per_day_std": 1878.7388908007495,
+      "violation_rate_mean": 89.78174603174602,
+      "violation_rate_std": 16.409806758217037,
+      "fcsd_mean": 0.6139180617970234,
+      "fcsd_std": 0.05854520853544474,
+      "convergence_mean": 115.0,
+      "n_seeds": 3
+    },
+    "hfg_sac": {
+      "cost_mean": 180444.53536468357,
+      "cost_std": 23889.708310132086,
+      "cost_per_day_mean": 25777.790766383372,
+      "cost_per_day_std": 3412.8154728760105,
+      "violation_rate_mean": 98.01587301587301,
+      "violation_rate_std": 2.1478804657352026,
+      "fcsd_mean": 0.5807814072670585,
+      "fcsd_std": 0.011859383064247312,
+      "convergence_mean": 123.0,
+      "n_seeds": 3
+    }
+  },
+  "S3_island_normal": {
+    "MILP": {
+      "cost_mean": 71486.79598383786,
+      "cost_std": 0.0,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.0032138167953125996,
+      "fcsd_std": 0.0
+    },
+    "MPC": {
+      "cost_mean": 72513.76911669478,
+      "cost_std": 0.0,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.11842281834608848,
+      "fcsd_std": 0.0
+    },
+    "sac": {
+      "cost_mean": 31911.2345501863,
+      "cost_std": 11707.41205914212,
+      "cost_per_day_mean": 4558.747792883757,
+      "cost_per_day_std": 1672.4874370203027,
+      "violation_rate_mean": 98.95833333333333,
+      "violation_rate_std": 1.7404671430534633e-14,
+      "fcsd_mean": 0.7533096502328694,
+      "fcsd_std": 0.028235754221336028,
+      "convergence_mean": 19.0,
+      "n_seeds": 3
+    },
+    "ppo": {
+      "cost_mean": 67319.3997710315,
+      "cost_std": 10698.51107558726,
+      "cost_per_day_mean": 9617.05711014736,
+      "cost_per_day_std": 1528.358725083894,
+      "violation_rate_mean": 4.166666666666666,
+      "violation_rate_std": 5.9579586961808335,
+      "fcsd_mean": 0.9888443670404238,
+      "fcsd_std": 0.01184350942539001,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "ppo_lagrangian": {
+      "cost_mean": 76456.00124803791,
+      "cost_std": 2268.0611226838987,
+      "cost_per_day_mean": 10922.285892576843,
+      "cost_per_day_std": 324.00873181198597,
+      "violation_rate_mean": 0.5952380952380951,
+      "violation_rate_std": 0.4464285714285714,
+      "fcsd_mean": 0.9969462474171223,
+      "fcsd_std": 0.002133107273721273,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "cpo": {
+      "cost_mean": 82075.34305215935,
+      "cost_std": 4927.083957434839,
+      "cost_per_day_mean": 11725.049007451336,
+      "cost_per_day_std": 703.8691367764059,
+      "violation_rate_mean": 1.240079365079365,
+      "violation_rate_std": 1.1267675289286256,
+      "fcsd_mean": 0.9954955271041408,
+      "fcsd_std": 0.0038216632200015746,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "safety_layer": {
+      "cost_mean": 25983.780771502166,
+      "cost_std": 2653.549818357041,
+      "cost_per_day_mean": 3711.968681643167,
+      "cost_per_day_std": 379.07854547957743,
+      "violation_rate_mean": 56.44841269841271,
+      "violation_rate_std": 13.634017036091686,
+      "fcsd_mean": 0.8217925026851937,
+      "fcsd_std": 0.04062685016526771,
+      "convergence_mean": 68.0,
+      "n_seeds": 3
+    },
+    "fuzzy_sac": {
+      "cost_mean": 52026.88202671233,
+      "cost_std": 23697.587584054498,
+      "cost_per_day_mean": 7432.411718101762,
+      "cost_per_day_std": 3385.369654864928,
+      "violation_rate_mean": 60.76388888888891,
+      "violation_rate_std": 39.77484923195552,
+      "fcsd_mean": 0.8539616040053347,
+      "fcsd_std": 0.0756142983195467,
+      "convergence_mean": 15.0,
+      "n_seeds": 3
+    },
+    "hfg_sac": {
+      "cost_mean": 39483.628417564156,
+      "cost_std": 8228.91749361645,
+      "cost_per_day_mean": 5640.518345366308,
+      "cost_per_day_std": 1175.559641945207,
+      "violation_rate_mean": 76.93452380952381,
+      "violation_rate_std": 38.14635707145742,
+      "fcsd_mean": 0.8213591765631093,
+      "fcsd_std": 0.06624914119420545,
+      "convergence_mean": 18.0,
+      "n_seeds": 3
+    }
+  },
+  "S4_island_extreme": {
+    "MILP": {
+      "cost_mean": 99856.32718037548,
+      "cost_std": 0.0,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.002650669642857143,
+      "fcsd_std": 0.0
+    },
+    "MPC": {
+      "cost_mean": 100487.87852908694,
+      "cost_std": 0.0,
+      "violation_rate_mean": 0.0,
+      "violation_rate_std": 0.0,
+      "fcsd_mean": 0.11842281834608848,
+      "fcsd_std": 0.0
+    },
+    "sac": {
+      "cost_mean": 78054.908435822,
+      "cost_std": 22241.93860244495,
+      "cost_per_day_mean": 11150.70120511743,
+      "cost_per_day_std": 3177.4198003492784,
+      "violation_rate_mean": 98.95833333333333,
+      "violation_rate_std": 1.7404671430534633e-14,
+      "fcsd_mean": 0.7497281437367058,
+      "fcsd_std": 0.01484743996599263,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "ppo": {
+      "cost_mean": 92613.73857219295,
+      "cost_std": 13085.517807600103,
+      "cost_per_day_mean": 13230.53408174185,
+      "cost_per_day_std": 1869.3596868000145,
+      "violation_rate_mean": 43.70039682539683,
+      "violation_rate_std": 5.540699027244344,
+      "fcsd_mean": 0.8613471809892839,
+      "fcsd_std": 0.018012405714548766,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "ppo_lagrangian": {
+      "cost_mean": 85552.80313299318,
+      "cost_std": 13922.736980933727,
+      "cost_per_day_mean": 12221.829018999028,
+      "cost_per_day_std": 1988.9624258476754,
+      "violation_rate_mean": 48.660714285714285,
+      "violation_rate_std": 5.2884987035466935,
+      "fcsd_mean": 0.8056985643372321,
+      "fcsd_std": 0.08498050186716465,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "cpo": {
+      "cost_mean": 91474.45748148502,
+      "cost_std": 2566.424822866696,
+      "cost_per_day_mean": 13067.779640212144,
+      "cost_per_day_std": 366.6321175523852,
+      "violation_rate_mean": 48.958333333333336,
+      "violation_rate_std": 1.322647978767198,
+      "fcsd_mean": 0.8347081057850573,
+      "fcsd_std": 0.017671270354913938,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "safety_layer": {
+      "cost_mean": 63536.0487929609,
+      "cost_std": 6272.478574274311,
+      "cost_per_day_mean": 9076.578398994416,
+      "cost_per_day_std": 896.0683677534732,
+      "violation_rate_mean": 57.44047619047618,
+      "violation_rate_std": 11.826378860896138,
+      "fcsd_mean": 0.811164400736239,
+      "fcsd_std": 0.03056246457946638,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "fuzzy_sac": {
+      "cost_mean": 66154.7760731172,
+      "cost_std": 23888.001031185737,
+      "cost_per_day_mean": 9450.682296159599,
+      "cost_per_day_std": 3412.571575883677,
+      "violation_rate_mean": 98.80952380952381,
+      "violation_rate_std": 0.2577456558882164,
+      "fcsd_mean": 0.7245174713000164,
+      "fcsd_std": 0.0641005046760419,
+      "convergence_mean": 10.0,
+      "n_seeds": 3
+    },
+    "hfg_sac": {
+      "cost_mean": 66655.33567561215,
+      "cost_std": 2122.8203057370492,
+      "cost_per_day_mean": 9522.190810801736,
+      "cost_per_day_std": 303.2600436767214,
+      "violation_rate_mean": 99.05753968253968,
+      "violation_rate_std": 0.17183043725881095,
+      "fcsd_mean": 0.7443066481883512,
+      "fcsd_std": 0.02829659518036321,
+      "convergence_mean": 12.666666666666666,
+      "n_seeds": 3
+    }
+  }
+}

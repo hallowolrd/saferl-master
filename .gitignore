@@ -10,10 +10,9 @@ build/
 # Virtual environments
 .venv/
 venv/
-env/
+
 
 # Outputs and data
-outputs/
 data/raw/
 data/processed/
 *.pt
@@ -39,6 +38,4 @@ temp/
 !终稿（杨爱惠）（5.16) .docx
 
 # Config with secrets
-.env
-.env.*
 bak/

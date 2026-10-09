@@ -1,0 +1,227 @@
+Missing jobs: 73 (n_episodes=200, device=cpu, seeds=[42, 123, 456])
+   ('rl', 'safety_layer', 'S1_grid_normal', 456)
+   ('rl', 'fuzzy_sac', 'S1_grid_normal', 42)
+   ('rl', 'fuzzy_sac', 'S1_grid_normal', 123)
+   ('rl', 'fuzzy_sac', 'S1_grid_normal', 456)
+   ('rl', 'hfg_sac', 'S1_grid_normal', 42)
+   ('rl', 'hfg_sac', 'S1_grid_normal', 123)
+   ('rl', 'hfg_sac', 'S1_grid_normal', 456)
+   ('rl', 'sac', 'S2_grid_extreme', 42)
+   ('rl', 'sac', 'S2_grid_extreme', 123)
+   ('rl', 'sac', 'S2_grid_extreme', 456)
+   ('rl', 'ppo', 'S2_grid_extreme', 42)
+   ('rl', 'ppo', 'S2_grid_extreme', 123)
+   ('rl', 'ppo', 'S2_grid_extreme', 456)
+   ('rl', 'ppo_lagrangian', 'S2_grid_extreme', 42)
+   ('rl', 'ppo_lagrangian', 'S2_grid_extreme', 123)
+   ('rl', 'ppo_lagrangian', 'S2_grid_extreme', 456)
+   ('rl', 'cpo', 'S2_grid_extreme', 42)
+   ('rl', 'cpo', 'S2_grid_extreme', 123)
+   ('rl', 'cpo', 'S2_grid_extreme', 456)
+   ('rl', 'safety_layer', 'S2_grid_extreme', 42)
+   ('rl', 'safety_layer', 'S2_grid_extreme', 123)
+   ('rl', 'safety_layer', 'S2_grid_extreme', 456)
+   ('rl', 'fuzzy_sac', 'S2_grid_extreme', 42)
+   ('rl', 'fuzzy_sac', 'S2_grid_extreme', 123)
+   ('rl', 'fuzzy_sac', 'S2_grid_extreme', 456)
+   ('rl', 'hfg_sac', 'S2_grid_extreme', 42)
+   ('rl', 'hfg_sac', 'S2_grid_extreme', 123)
+   ('rl', 'hfg_sac', 'S2_grid_extreme', 456)
+   ('model', 'S2_grid_extreme', '')
+   ('rl', 'sac', 'S3_island_normal', 42)
+   ('rl', 'sac', 'S3_island_normal', 123)
+   ('rl', 'sac', 'S3_island_normal', 456)
+   ('rl', 'ppo', 'S3_island_normal', 42)
+   ('rl', 'ppo', 'S3_island_normal', 123)
+   ('rl', 'ppo', 'S3_island_normal', 456)
+   ('rl', 'ppo_lagrangian', 'S3_island_normal', 42)
+   ('rl', 'ppo_lagrangian', 'S3_island_normal', 123)
+   ('rl', 'ppo_lagrangian', 'S3_island_normal', 456)
+   ('rl', 'cpo', 'S3_island_normal', 42)
+   ('rl', 'cpo', 'S3_island_normal', 123)
+   ('rl', 'cpo', 'S3_island_normal', 456)
+   ('rl', 'safety_layer', 'S3_island_normal', 42)
+   ('rl', 'safety_layer', 'S3_island_normal', 123)
+   ('rl', 'safety_layer', 'S3_island_normal', 456)
+   ('rl', 'fuzzy_sac', 'S3_island_normal', 42)
+   ('rl', 'fuzzy_sac', 'S3_island_normal', 123)
+   ('rl', 'fuzzy_sac', 'S3_island_normal', 456)
+   ('rl', 'hfg_sac', 'S3_island_normal', 42)
+   ('rl', 'hfg_sac', 'S3_island_normal', 123)
+   ('rl', 'hfg_sac', 'S3_island_normal', 456)
+   ('model', 'S3_island_normal', '')
+   ('rl', 'sac', 'S4_island_extreme', 42)
+   ('rl', 'sac', 'S4_island_extreme', 123)
+   ('rl', 'sac', 'S4_island_extreme', 456)
+   ('rl', 'ppo', 'S4_island_extreme', 42)
+   ('rl', 'ppo', 'S4_island_extreme', 123)
+   ('rl', 'ppo', 'S4_island_extreme', 456)
+   ('rl', 'ppo_lagrangian', 'S4_island_extreme', 42)
+   ('rl', 'ppo_lagrangian', 'S4_island_extreme', 123)
+   ('rl', 'ppo_lagrangian', 'S4_island_extreme', 456)
+   ('rl', 'cpo', 'S4_island_extreme', 42)
+   ('rl', 'cpo', 'S4_island_extreme', 123)
+   ('rl', 'cpo', 'S4_island_extreme', 456)
+   ('rl', 'safety_layer', 'S4_island_extreme', 42)
+   ('rl', 'safety_layer', 'S4_island_extreme', 123)
+   ('rl', 'safety_layer', 'S4_island_extreme', 456)
+   ('rl', 'fuzzy_sac', 'S4_island_extreme', 42)
+   ('rl', 'fuzzy_sac', 'S4_island_extreme', 123)
+   ('rl', 'fuzzy_sac', 'S4_island_extreme', 456)
+   ('rl', 'hfg_sac', 'S4_island_extreme', 42)
+   ('rl', 'hfg_sac', 'S4_island_extreme', 123)
+   ('rl', 'hfg_sac', 'S4_island_extreme', 456)
+   ('model', 'S4_island_extreme', '')
+
+Launching 73 jobs with 4 workers...
+[1/73] OK  ('safety_layer', 'S1_grid_normal', 456, 'ok', 214511.80812914818, 0.0, 0.9386935191604568) (1443s elapsed)
+[2/73] OK  ('fuzzy_sac', 'S1_grid_normal', 456, 'ok', 92697.04087598588, 0.0, 0.9936212154802979) (1479s elapsed)
+[3/73] OK  ('fuzzy_sac', 'S1_grid_normal', 123, 'ok', 121241.41617850929, 99.10714285714286, 0.5857859705268267) (1553s elapsed)
+[4/73] OK  ('fuzzy_sac', 'S1_grid_normal', 42, 'ok', 104003.89166238249, 58.92857142857143, 0.763706377172914) (1566s elapsed)
+[5/73] OK  ('sac', 'S2_grid_extreme', 42, 'ok', 190374.48282130942, 99.25595238095238, 0.5640751886466637) (3135s elapsed)
+[6/73] OK  ('hfg_sac', 'S1_grid_normal', 42, 'ok', 63627.80252771021, 98.36309523809521, 0.6224573528704436) (3863s elapsed)
+[7/73] OK  ('hfg_sac', 'S1_grid_normal', 123, 'ok', 103493.05833728857, 75.59523809523809, 0.7126075432314438) (3918s elapsed)
+[8/73] OK  ('hfg_sac', 'S1_grid_normal', 456, 'ok', 87772.16939874066, 0.0, 0.98444097558303) (3938s elapsed)
+[9/73] OK  ('ppo', 'S2_grid_extreme', 42, 'ok', 105234.46696789944, 62.79761904761905, 0.7170516639456908) (4160s elapsed)
+[10/73] OK  ('ppo', 'S2_grid_extreme', 123, 'ok', 116249.21648507188, 35.41666666666667, 0.814260187298865) (4227s elapsed)
+[11/73] OK  ('ppo', 'S2_grid_extreme', 456, 'ok', 128820.90067435158, 28.273809523809526, 0.8438039247278948) (4458s elapsed)
+[12/73] OK  ('ppo_lagrangian', 'S2_grid_extreme', 42, 'ok', 278521.90074551484, 0.0, 0.9999889041321163) (4488s elapsed)
+[13/73] OK  ('sac', 'S2_grid_extreme', 123, 'ok', 160376.65791443823, 99.25595238095238, 0.6164758691864137) (4646s elapsed)
+[14/73] OK  ('ppo_lagrangian', 'S2_grid_extreme', 123, 'ok', 294894.0781150656, 0.0, 0.9999946358736429) (4760s elapsed)
+[15/73] OK  ('ppo_lagrangian', 'S2_grid_extreme', 456, 'ok', 354111.8843161216, 0.0, 0.9999939706028821) (4772s elapsed)
+[16/73] OK  ('cpo', 'S2_grid_extreme', 42, 'ok', 211782.2343326279, 0.0, 0.9994332445794841) (4936s elapsed)
+[17/73] OK  ('cpo', 'S2_grid_extreme', 123, 'ok', 208408.8606520042, 0.0, 0.9989399344257459) (5022s elapsed)
+[18/73] OK  ('cpo', 'S2_grid_extreme', 456, 'ok', 244988.49751601758, 0.0, 0.9998347796561473) (5056s elapsed)
+[19/73] OK  ('sac', 'S2_grid_extreme', 456, 'ok', 191452.96974976265, 99.25595238095238, 0.5689781268877521) (5364s elapsed)
+[20/73] OK  ('safety_layer', 'S2_grid_extreme', 42, 'ok', 364582.0356163736, 0.0, 0.991008660875076) (6673s elapsed)
+[21/73] OK  ('safety_layer', 'S2_grid_extreme', 456, 'ok', 224439.77965596746, 0.0, 0.9318574499079493) (6771s elapsed)
+[22/73] OK  ('safety_layer', 'S2_grid_extreme', 123, 'ok', 262444.9285705666, 0.0, 0.9532351390747967) (6773s elapsed)
+[23/73] OK  ('fuzzy_sac', 'S2_grid_extreme', 42, 'ok', 184661.0765739856, 99.25595238095238, 0.5590717210274329) (7241s elapsed)
+[24/73] OK  ('fuzzy_sac', 'S2_grid_extreme', 123, 'ok', 210532.01900868764, 99.25595238095238, 0.6071147713569222) (8391s elapsed)
+[25/73] OK  ('fuzzy_sac', 'S2_grid_extreme', 456, 'ok', 193487.92920756518, 70.83333333333334, 0.6755676930067152) (8443s elapsed)
+[26/73] OK  ('model', 'S2_grid_extreme', '', 'ok', 0.0, 0.0, 0.0) (8443s elapsed)
+[27/73] OK  ('hfg_sac', 'S2_grid_extreme', 42, 'ok', 188497.070558557, 99.25595238095238, 0.5709232540726203) (9238s elapsed)
+[28/73] OK  ('hfg_sac', 'S2_grid_extreme', 123, 'ok', 153569.07367130736, 95.5357142857143, 0.5939419830206158) (9689s elapsed)
+[29/73] OK  ('sac', 'S3_island_normal', 42, 'ok', 41001.62962086266, 98.95833333333334, 0.7858238329458589) (9944s elapsed)
+[30/73] OK  ('ppo', 'S3_island_normal', 42, 'ok', 70748.21879560375, 11.011904761904761, 0.9760404479406082) (10241s elapsed)
+[31/73] OK  ('ppo', 'S3_island_normal', 123, 'ok', 55326.83189710239, 1.339285714285714, 0.991085382313688) (10537s elapsed)
+[32/73] OK  ('hfg_sac', 'S2_grid_extreme', 456, 'ok', 199267.4618641864, 99.25595238095238, 0.5774789847079393) (10713s elapsed)
+[33/73] OK  ('sac', 'S3_island_normal', 123, 'ok', 36031.31457628915, 98.95833333333334, 0.7391451071619464) (10747s elapsed)
+[34/73] OK  ('ppo', 'S3_island_normal', 456, 'ok', 75883.14862038838, 0.14880952380952378, 0.9994072708669753) (10839s elapsed)
+[35/73] OK  ('ppo_lagrangian', 'S3_island_normal', 42, 'ok', 75349.26031555193, 0.14880952380952378, 0.9990014825103198) (11039s elapsed)
+[36/73] OK  ('ppo_lagrangian', 'S3_island_normal', 123, 'ok', 79064.96034956283, 0.5952380952380951, 0.997094279977898) (11135s elapsed)
+[37/73] OK  ('ppo_lagrangian', 'S3_island_normal', 456, 'ok', 74953.78307899898, 1.0416666666666665, 0.9947429797631491) (11353s elapsed)
+[38/73] OK  ('sac', 'S3_island_normal', 456, 'ok', 18700.75945340708, 98.95833333333334, 0.7349600105908031) (11398s elapsed)  [safety_layer on S1_grid_normal seed=456] cost=214511.8  viol=0.00%  fcsd=0.9387  time=1429.6s
+  [hfg_sac on S1_grid_normal seed=42] cost=63627.8  viol=98.36%  fcsd=0.6225  time=2410.2s
+  [sac on S2_grid_extreme seed=456] cost=191453.0  viol=99.26%  fcsd=0.5690  time=1490.6s
+  [fuzzy_sac on S2_grid_extreme seed=42] cost=184661.1  viol=99.26%  fcsd=0.5591  time=1866.7s
+  [hfg_sac on S2_grid_extreme seed=123] cost=153569.1  viol=95.54%  fcsd=0.5939  time=2438.9s
+  [sac on S3_island_normal seed=456] cost=18700.8  viol=98.96%  fcsd=0.7350  time=1698.1s
+  [safety_layer on S3_island_normal seed=42] cost=24303.5  viol=49.26%  fcsd=0.8399  time=2165.8s
+  [fuzzy_sac on S3_island_normal seed=123] cost=78912.4  viol=19.35%  fcsd=0.9383  time=1886.4s
+  [hfg_sac on S3_island_normal seed=456] cost=48345.0  viol=32.89%  fcsd=0.8978  time=2721.0s
+  [ppo_lagrangian on S4_island_extreme seed=42] cost=70031.5  viol=54.76%  fcsd=0.7076  time=328.8s
+  [cpo on S4_island_extreme seed=42] cost=88532.9  viol=50.45%  fcsd=0.8150  time=322.3s
+  [safety_layer on S4_island_extreme seed=123] cost=67432.9  viol=55.95%  fcsd=0.8165  time=1669.3s
+  [fuzzy_sac on S4_island_extreme seed=456] cost=45517.8  viol=98.51%  fcsd=0.6506  time=1871.1s
+  [MILP on S4_island_extreme] cost=99856.3  viol=0.00%
+  [MPC on S4_island_extreme]  cost=100487.9  viol=0.00%
+  [fuzzy_sac on S1_grid_normal seed=42] cost=104003.9  viol=58.93%  fcsd=0.7637  time=1556.0s
+  [sac on S2_grid_extreme seed=42] cost=190374.5  viol=99.26%  fcsd=0.5641  time=1558.7s
+  [sac on S2_grid_extreme seed=123] cost=160376.7  viol=99.26%  fcsd=0.6165  time=1501.8s
+  [cpo on S2_grid_extreme seed=42] cost=211782.2  viol=0.00%  fcsd=0.9994  time=284.3s
+  [safety_layer on S2_grid_extreme seed=42] cost=364582.0  viol=0.00%  fcsd=0.9910  time=1726.8s
+  [fuzzy_sac on S2_grid_extreme seed=123] cost=210532.0  viol=99.26%  fcsd=0.6071  time=1707.6s
+  [hfg_sac on S2_grid_extreme seed=456] cost=199267.5  viol=99.26%  fcsd=0.5775  time=2316.6s
+  [ppo_lagrangian on S3_island_normal seed=42] cost=75349.3  viol=0.15%  fcsd=0.9990  time=314.4s
+  [cpo on S3_island_normal seed=42] cost=76942.5  viol=0.45%  fcsd=0.9984  time=551.8s
+  [safety_layer on S3_island_normal seed=123] cost=24604.9  viol=72.17%  fcsd=0.7753  time=2152.7s
+  [fuzzy_sac on S3_island_normal seed=456] cost=34173.8  viol=64.29%  fcsd=0.8314  time=1883.4s
+  [MILP on S3_island_normal] cost=71486.8  viol=0.00%
+  [MPC on S3_island_normal]  cost=72513.8  viol=0.00%
+  [sac on S4_island_extreme seed=42] cost=89818.2  viol=98.96%  fcsd=0.7661  time=1758.5s
+  [ppo on S4_island_extreme seed=42] cost=96961.6  viol=41.52%  fcsd=0.8674  time=320.2s
+  [ppo on S4_island_extreme seed=123] cost=77907.7  viol=50.00%  fcsd=0.8411  time=320.2s
+  [ppo on S4_island_extreme seed=456] cost=102971.9  viol=39.58%  fcsd=0.8755  time=312.1s
+  [ppo_lagrangian on S4_island_extreme seed=456] cost=89686.0  viol=45.83%  fcsd=0.8528  time=321.7s
+  [safety_layer on S4_island_extreme seed=42] cost=66874.8  viol=46.43%  fcsd=0.8387  time=1670.9s
+  [fuzzy_sac on S4_island_extreme seed=123] cost=92323.3  viol=98.96%  fcsd=0.7649  time=1915.4s
+  [hfg_sac on S4_island_extreme seed=456] cost=66442.2  viol=98.96%  fcsd=0.7693  time=2032.6s
+  [fuzzy_sac on S1_grid_normal seed=123] cost=121241.4  viol=99.11%  fcsd=0.5858  time=1540.2s
+  [hfg_sac on S1_grid_normal seed=456] cost=87772.2  viol=0.00%  fcsd=0.9844  time=2375.0s
+  [ppo on S2_grid_extreme seed=123] cost=116249.2  viol=35.42%  fcsd=0.8143  time=276.6s
+  [ppo_lagrangian on S2_grid_extreme seed=42] cost=278521.9  viol=0.00%  fcsd=1.0000  time=255.7s
+  [ppo_lagrangian on S2_grid_extreme seed=456] cost=354111.9  viol=0.00%  fcsd=1.0000  time=279.8s
+  [cpo on S2_grid_extreme seed=456] cost=244988.5  viol=0.00%  fcsd=0.9998  time=277.9s
+  [safety_layer on S2_grid_extreme seed=456] cost=224439.8  viol=0.00%  fcsd=0.9319  time=1705.1s
+  [fuzzy_sac on S2_grid_extreme seed=456] cost=193487.9  viol=70.83%  fcsd=0.6756  time=1661.9s
+  [MILP on S2_grid_extreme] cost=79120.6  viol=0.00%
+  [MPC on S2_grid_extreme]  cost=77287.4  viol=0.00%
+  [sac on S3_island_normal seed=42] cost=41001.6  viol=98.96%  fcsd=0.7858  time=1490.5s
+  [ppo on S3_island_normal seed=42] cost=70748.2  viol=11.01%  fcsd=0.9760  time=286.1s
+  [ppo on S3_island_normal seed=123] cost=55326.8  viol=1.34%  fcsd=0.9911  time=285.5s
+  [ppo on S3_island_normal seed=456] cost=75883.1  viol=0.15%  fcsd=0.9994  time=292.8s
+  [ppo_lagrangian on S3_island_normal seed=456] cost=74953.8  viol=1.04%  fcsd=0.9947  time=503.5s
+  [cpo on S3_island_normal seed=456] cost=82516.6  viol=2.53%  fcsd=0.9912  time=382.7s
+  [fuzzy_sac on S3_island_normal seed=42] cost=42994.4  viol=98.66%  fcsd=0.7922  time=2303.6s
+  [hfg_sac on S3_island_normal seed=123] cost=32082.8  viol=98.96%  fcsd=0.7865  time=2766.4s
+  [sac on S4_island_extreme seed=456] cost=91945.0  viol=98.96%  fcsd=0.7459  time=1720.3s
+  [cpo on S4_island_extreme seed=123] cost=92634.0  viol=47.92%  fcsd=0.8492  time=323.3s
+  [safety_layer on S4_island_extreme seed=456] cost=56300.4  viol=69.94%  fcsd=0.7783  time=1679.2s
+  [hfg_sac on S4_island_extreme seed=42] cost=68876.7  viol=99.26%  fcsd=0.7136  time=2669.1s
+  [fuzzy_sac on S1_grid_normal seed=456] cost=92697.0  viol=0.00%  fcsd=0.9936  time=1466.0s
+  [hfg_sac on S1_grid_normal seed=123] cost=103493.1  viol=75.60%  fcsd=0.7126  time=2428.5s
+  [ppo on S2_grid_extreme seed=42] cost=105234.5  viol=62.80%  fcsd=0.7171  time=233.4s
+  [ppo on S2_grid_extreme seed=456] cost=128820.9  viol=28.27%  fcsd=0.8438  time=287.2s
+  [ppo_lagrangian on S2_grid_extreme seed=123] cost=294894.1  viol=0.00%  fcsd=1.0000  time=296.1s
+  [cpo on S2_grid_extreme seed=123] cost=208408.9  viol=0.00%  fcsd=0.9989  time=255.3s
+  [safety_layer on S2_grid_extreme seed=123] cost=262444.9  viol=0.00%  fcsd=0.9532  time=1741.8s
+  [hfg_sac on S2_grid_extreme seed=42] cost=188497.1  viol=99.26%  fcsd=0.5709  time=2454.7s
+  [sac on S3_island_normal seed=123] cost=36031.3  viol=98.96%  fcsd=0.7391  time=1502.6s
+  [ppo_lagrangian on S3_island_normal seed=123] cost=79065.0  viol=0.60%  fcsd=0.9971  time=380.8s
+  [cpo on S3_island_normal seed=123] cost=86767.0  viol=0.74%  fcsd=0.9970  time=498.1s
+  [safety_layer on S3_island_normal seed=456] cost=29042.9  viol=47.92%  fcsd=0.8503  time=2131.0s
+  [hfg_sac on S3_island_normal seed=42] cost=38023.1  viol=98.96%  fcsd=0.7798  time=2735.2s
+  [sac on S4_island_extreme seed=123] cost=52401.5  viol=98.96%  fcsd=0.7372  time=1771.6s
+  [ppo_lagrangian on S4_island_extreme seed=123] cost=96941.0  viol=45.39%  fcsd=0.8567  time=323.7s
+  [cpo on S4_island_extreme seed=456] cost=93256.5  viol=48.51%  fcsd=0.8399  time=329.7s
+  [fuzzy_sac on S4_island_extreme seed=42] cost=60623.3  viol=98.96%  fcsd=0.7581  time=1862.6s
+  [hfg_sac on S4_island_extreme seed=123] cost=64647.1  viol=98.96%  fcsd=0.7500  time=2692.8s
+
+[39/73] OK  ('cpo', 'S3_island_normal', 42, 'ok', 76942.48634225079, 0.44642857142857134, 0.9983600214120271) (11597s elapsed)
+[40/73] OK  ('cpo', 'S3_island_normal', 123, 'ok', 86766.97559030916, 0.7440476190476188, 0.9969703599348521) (11639s elapsed)
+[41/73] OK  ('cpo', 'S3_island_normal', 456, 'ok', 82516.56722391811, 2.5297619047619047, 0.9911561999655433) (11742s elapsed)
+[42/73] OK  ('safety_layer', 'S3_island_normal', 42, 'ok', 24303.533476607554, 49.255952380952394, 0.8398571585135837) (13574s elapsed)
+[43/73] OK  ('safety_layer', 'S3_island_normal', 123, 'ok', 24604.917395665612, 72.17261904761905, 0.7752662804453558) (13760s elapsed)
+[44/73] OK  ('safety_layer', 'S3_island_normal', 456, 'ok', 29042.89144223334, 47.91666666666667, 0.8502540690966416) (13780s elapsed)
+[45/73] OK  ('fuzzy_sac', 'S3_island_normal', 42, 'ok', 42994.36803732985, 98.6607142857143, 0.7921974209963121) (14055s elapsed)
+[46/73] OK  ('fuzzy_sac', 'S3_island_normal', 123, 'ok', 78912.44669011878, 19.345238095238095, 0.9382891011428691) (15470s elapsed)
+[47/73] OK  ('fuzzy_sac', 'S3_island_normal', 456, 'ok', 34173.83135268836, 64.2857142857143, 0.8313982898768231) (15653s elapsed)
+[48/73] OK  ('model', 'S3_island_normal', '', 'ok', 0.0, 0.0, 0.0) (15653s elapsed)
+[49/73] OK  ('hfg_sac', 'S3_island_normal', 42, 'ok', 38023.1189664897, 98.95833333333334, 0.7798490358746337) (16525s elapsed)
+[50/73] OK  ('hfg_sac', 'S3_island_normal', 123, 'ok', 32082.753625977784, 98.95833333333334, 0.7864668761339944) (16832s elapsed)
+[51/73] OK  ('sac', 'S4_island_extreme', 42, 'ok', 89818.17438691854, 98.95833333333334, 0.7661109648470197) (17422s elapsed)
+[52/73] OK  ('ppo', 'S4_island_extreme', 42, 'ok', 96961.61257009607, 41.51785714285715, 0.8674117360608301) (17753s elapsed)
+[53/73] OK  ('ppo', 'S4_island_extreme', 123, 'ok', 77907.73190910419, 50.0, 0.8410852012371739) (18084s elapsed)
+[54/73] OK  ('hfg_sac', 'S3_island_normal', 456, 'ok', 48345.012660224966, 32.88690476190476, 0.8977616176806998) (18201s elapsed)
+[55/73] OK  ('sac', 'S4_island_extreme', 123, 'ok', 52401.50231222855, 98.95833333333334, 0.7371607929517987) (18307s elapsed)
+[56/73] OK  ('ppo', 'S4_island_extreme', 456, 'ok', 102971.87123737858, 39.58333333333333, 0.8755446056698478) (18406s elapsed)
+[57/73] OK  ('ppo_lagrangian', 'S4_island_extreme', 42, 'ok', 70031.46314425045, 54.76190476190477, 0.7075977456298953) (18536s elapsed)
+[58/73] OK  ('sac', 'S4_island_extreme', 456, 'ok', 91945.0486083189, 98.95833333333334, 0.7459126734112991) (18562s elapsed)
+[59/73] OK  ('ppo_lagrangian', 'S4_island_extreme', 123, 'ok', 96940.95279728019, 45.38690476190476, 0.8567130827275514) (18636s elapsed)
+[60/73] OK  ('ppo_lagrangian', 'S4_island_extreme', 456, 'ok', 89685.99345744893, 45.83333333333333, 0.8527848646542495) (18734s elapsed)
+[61/73] OK  ('cpo', 'S4_island_extreme', 42, 'ok', 88532.88435852097, 50.44642857142857, 0.8150193949727897) (18864s elapsed)
+[62/73] OK  ('cpo', 'S4_island_extreme', 123, 'ok', 92633.96114411442, 47.91666666666667, 0.8491935597539921) (18891s elapsed)
+[63/73] OK  ('cpo', 'S4_island_extreme', 456, 'ok', 93256.52694181961, 48.51190476190476, 0.8399113626283901) (18972s elapsed)
+[64/73] OK  ('safety_layer', 'S4_island_extreme', 42, 'ok', 66874.83783962717, 46.42857142857143, 0.8387292162713782) (20415s elapsed)
+[65/73] OK  ('safety_layer', 'S4_island_extreme', 123, 'ok', 67432.92350863572, 55.95238095238095, 0.8164660163797965) (20544s elapsed)
+[66/73] OK  ('safety_layer', 'S4_island_extreme', 456, 'ok', 56300.3850306198, 69.94047619047618, 0.7782979695575423) (20580s elapsed)
+[67/73] OK  ('fuzzy_sac', 'S4_island_extreme', 42, 'ok', 60623.319292649394, 98.95833333333334, 0.7580899286132576) (20845s elapsed)
+[68/73] OK  ('fuzzy_sac', 'S4_island_extreme', 123, 'ok', 92323.25713649392, 98.95833333333334, 0.7648586640991749) (22341s elapsed)
+[69/73] OK  ('fuzzy_sac', 'S4_island_extreme', 456, 'ok', 45517.751790208276, 98.51190476190479, 0.6506038211876166) (22425s elapsed)
+[70/73] OK  ('model', 'S4_island_extreme', '', 'ok', 0.0, 0.0, 0.0) (22425s elapsed)
+[71/73] OK  ('hfg_sac', 'S4_island_extreme', 42, 'ok', 68876.67736163102, 99.25595238095238, 0.713580803809353) (23259s elapsed)
+[72/73] OK  ('hfg_sac', 'S4_island_extreme', 123, 'ok', 64647.11434047669, 98.95833333333334, 0.7500446462638879) (23547s elapsed)
+[73/73] OK  ('hfg_sac', 'S4_island_extreme', 456, 'ok', 66442.21532472875, 98.95833333333334, 0.769294494491813) (24375s elapsed)
+
+Done. ok=73 failed=0 total=73 wall=24376s

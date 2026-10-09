@@ -1,0 +1,28 @@
+Total jobs: 6
+Seeds: [42]
+Episodes per run: 200
+Workers: 6
+Skip existing: True
+Output: E:\研究\saferl\outputs\experiments\results
+  rq2: 6 jobs
+
+Launching 6 jobs with 6 workers...
+
+[1/6] OK  rq2                seed=42  cost/d=    15,688  viol=   0.1%  fcsd=1.000  (430s)
+[2/6] OK  rq2                seed=42  cost/d=    14,074  viol=   0.0%  fcsd=1.000  (431s)
+[3/6] OK  rq2                seed=42  cost/d=    12,857  viol=  97.0%  fcsd=0.794  (1049s)
+[4/6] OK  rq2                seed=42  cost/d=    13,056  viol=  35.1%  fcsd=0.890  (1060s)
+[5/6] OK  rq2                seed=42  cost/d=    12,716  viol=   0.3%  fcsd=0.996  (1218s)
+[6/6] OK  rq2                seed=42  cost/d=    12,516  viol=   0.3%  fcsd=0.991  (1526s)
+  [cpo on extremity_1.0 seed=42] cost=109815.6  viol=0.15%  fcsd=0.9996  time=425.3s
+  [ppo_lagrangian on extremity_1.0 seed=42] cost=98520.7  viol=0.00%  fcsd=0.9999  time=425.9s
+  [sac on extremity_1.0 seed=42] cost=89996.0  viol=97.02%  fcsd=0.7941  time=1043.1s
+  [safety_layer on extremity_1.0 seed=42] cost=91394.4  viol=35.12%  fcsd=0.8902  time=1055.4s
+  [hfg_sac on extremity_1.0 seed=42] cost=87615.2  viol=0.30%  fcsd=0.9913  time=1521.1s
+  [fuzzy_sac on extremity_1.0 seed=42] cost=89014.5  viol=0.30%  fcsd=0.9961  time=1211.7s
+
+============================================================
+Done. ok=6  failed=0  total=6
+Wall time: 0.43 hours
+Log: E:\研究\saferl\outputs\experiments\run_all_parallel.log
+============================================================

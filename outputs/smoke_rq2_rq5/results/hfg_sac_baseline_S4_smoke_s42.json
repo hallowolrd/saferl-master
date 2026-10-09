@@ -1,0 +1,43 @@
+{
+  "algorithm": "hfg_sac_baseline",
+  "scenario": "S4_smoke",
+  "seed": 42,
+  "total_cost": 2515.606912896037,
+  "cost_per_day": 359.3724161280053,
+  "violation_rate": 100.0,
+  "avg_fcsd": 0.4979291694523679,
+  "min_fcsd": 0.21145559418067594,
+  "max_violation": 0.0,
+  "convergence_episode": 0,
+  "final_reward": -819144.1828156948,
+  "training_time_s": 4.442707061767578,
+  "episode_rewards": [
+    -841750.1325412742,
+    -925472.5330686367,
+    -827584.7554099977
+  ],
+  "episode_costs": [
+    70664.7076312593,
+    41484.48237911277,
+    2477.5090789049864
+  ],
+  "episode_violation_rates": [
+    76.04166666666666,
+    83.77976190476191,
+    100.0
+  ],
+  "episode_fcsds": [
+    0.6809769104009963,
+    0.5850840333349734,
+    0.4958246404641833
+  ],
+  "eval_costs": [
+    2515.606912896037
+  ],
+  "eval_violations": [
+    100.0
+  ],
+  "eval_fcsds": [
+    0.4979291694523679
+  ]
+}

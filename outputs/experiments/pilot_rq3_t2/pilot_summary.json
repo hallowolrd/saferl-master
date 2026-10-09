@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "arm": "from_scratch",
+      "cost_per_day": 10588.57,
+      "violation_pct": 9.38,
+      "min_fcsd": 0.677,
+      "convergence_ep": 10,
+      "train_time_s": 631.1
+    },
+    {
+      "arm": "naive_transfer",
+      "cost_per_day": 8916.65,
+      "violation_pct": 11.16,
+      "min_fcsd": 0.677,
+      "convergence_ep": 17,
+      "train_time_s": 2369.5,
+      "m1_similarities": {},
+      "m1_categories": {},
+      "m3_frozen": false,
+      "dims_match": false
+    },
+    {
+      "arm": "M4_only",
+      "cost_per_day": 10241.63,
+      "violation_pct": 4.61,
+      "min_fcsd": 0.677,
+      "convergence_ep": 25,
+      "train_time_s": 5066.4,
+      "m1_similarities": {},
+      "m1_categories": {
+        "soc_upper": "adaptable",
+        "soc_lower": "adaptable",
+        "freq_dev": "adaptable"
+      },
+      "m3_frozen": false,
+      "dims_match": false
+    },
+    {
+      "arm": "M1_M4",
+      "cost_per_day": 10241.63,
+      "violation_pct": 4.61,
+      "min_fcsd": 0.677,
+      "convergence_ep": 25,
+      "train_time_s": 2291.8,
+      "m1_similarities": {
+        "soc_upper": 1.0,
+        "soc_lower": 1.0,
+        "freq_dev": 1.0
+      },
+      "m1_categories": {
+        "soc_upper": "transferable",
+        "soc_lower": "transferable",
+        "freq_dev": "transferable"
+      },
+      "m3_frozen": false,
+      "dims_match": false
+    }
+  ],
+  "config": {
+    "task": "T2_grid_island",
+    "seed": 42,
+    "n_episodes": 200
+  }
+}

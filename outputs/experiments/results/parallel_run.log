@@ -1,0 +1,46 @@
+[worker start] S1_grid_normal
+[worker start] S2_grid_extreme
+[worker start] S3_island_normal
+[worker start] S4_island_extreme
+  [hfg_sac on S1_grid_normal seed=42] cost=100735.5  viol=0.00%  fcsd=0.9757  time=3135.3s
+[done] S1_grid_normal seed=42: cost/day=14,391 viol=0.0% fcsd=0.976 (3159s)
+  [hfg_sac on S2_grid_extreme seed=42] cost=173777.8  viol=0.00%  fcsd=0.9399  time=3139.4s
+[done] S2_grid_extreme seed=42: cost/day=24,825 viol=0.0% fcsd=0.940 (3164s)
+  [hfg_sac on S3_island_normal seed=42] cost=63135.6  viol=3.72%  fcsd=0.9816  time=3816.7s
+[done] S3_island_normal seed=42: cost/day=9,019 viol=3.7% fcsd=0.982 (3847s)
+  [hfg_sac on S4_island_extreme seed=42] cost=94127.9  viol=29.91%  fcsd=0.9023  time=3933.6s
+[done] S4_island_extreme seed=42: cost/day=13,447 viol=29.9% fcsd=0.902 (3970s)
+  [hfg_sac on S1_grid_normal seed=123] cost=95017.4  viol=0.00%  fcsd=0.9772  time=3061.1s
+[done] S1_grid_normal seed=123: cost/day=13,574 viol=0.0% fcsd=0.977 (3081s)
+  [hfg_sac on S2_grid_extreme seed=123] cost=161431.1  viol=0.00%  fcsd=0.9171  time=3065.0s
+[done] S2_grid_extreme seed=123: cost/day=23,062 viol=0.0% fcsd=0.917 (3085s)
+  [hfg_sac on S3_island_normal seed=123] cost=56296.1  viol=6.10%  fcsd=0.9774  time=3732.9s
+[done] S3_island_normal seed=123: cost/day=8,042 viol=6.1% fcsd=0.977 (3764s)
+  [hfg_sac on S4_island_extreme seed=123] cost=97006.1  viol=31.55%  fcsd=0.8972  time=3802.3s
+[done] S4_island_extreme seed=123: cost/day=13,858 viol=31.5% fcsd=0.897 (3834s)
+  [hfg_sac on S1_grid_normal seed=456] cost=97378.0  viol=0.00%  fcsd=0.9517  time=3046.4s
+[done] S1_grid_normal seed=456: cost/day=13,911 viol=0.0% fcsd=0.952 (3067s)
+[worker done]  S1_grid_normal
+  [hfg_sac on S2_grid_extreme seed=456] cost=163931.2  viol=0.00%  fcsd=0.9190  time=3052.3s
+[done] S2_grid_extreme seed=456: cost/day=23,419 viol=0.0% fcsd=0.919 (3069s)
+[worker done]  S2_grid_extreme
+  [hfg_sac on S3_island_normal seed=456] cost=56199.5  viol=5.80%  fcsd=0.9774  time=2973.6s
+[done] S3_island_normal seed=456: cost/day=8,028 viol=5.8% fcsd=0.977 (2992s)
+[worker done]  S3_island_normal
+  [hfg_sac on S4_island_extreme seed=456] cost=94667.7  viol=38.84%  fcsd=0.8767  time=2922.7s
+[done] S4_island_extreme seed=456: cost/day=13,524 viol=38.8% fcsd=0.877 (2934s)
+[worker done]  S4_island_extreme
+Launching 4 parallel workers (one per scenario)
+GPU available: True (NVIDIA GeForce RTX 4060 Laptop GPU)
+
+All 12 runs completed in 179.0 min (vs ~4x sequential time)
+Traceback (most recent call last):
+  File "E:\研究\saferl\run\rerun_hfg_sac_parallel.py", line 130, in <module>
+    main()
+    ~~~~^^
+  File "E:\研究\saferl\run\rerun_hfg_sac_parallel.py", line 118, in main
+    print(f"\n{'Scenario':<22} {'Seed':<6} {'Cost \xa5/d':>14} {'Viol %':>10} "
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          f"{'Avg FCSD':>10}")
+          ^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\xa5' in position 43: illegal multibyte sequence
